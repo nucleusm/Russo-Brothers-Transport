@@ -1,0 +1,71 @@
+.wizard>.steps a {
+    padding: 0 !important;
+    padding-left: 5px !important;
+}
+
+.steps-theme-red .wizard>.steps .current a {
+    background: #920c16 !important;
+}
+
+.steps-theme-red .wizard>.actions a {
+    border: 1px solid #920c16;
+}
+
+.steps-theme-red .wizard>.steps .current .number {
+    background: #920c16 !important;
+}
+
+.steps-theme-red .wizard>.steps .done a {
+    background: #a4a4a4 !important;
+}
+
+.steps-theme-red .wizard>.steps .done .number {
+    background: #a4a4a4 !important;
+}
+
+.custom-bg {
+    background-color: #E8E8E8 !important;
+    color: #232323 !important;
+    background-color: #e8e8e8;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23b4b4b4' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+
+.smart-forms input:checked {
+    border-color: #920c16 !important;
+
+}
+
+.radio {
+    border-color: #cfcfcf !important;
+}
+
+.smart-forms .radio::before {
+    background: #920c16 !important;
+}
+
+.btn-add-more {
+    color: #920c16;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #920c16;
+    
+    padding: 1em 1em;
+    text-decoration: none;
+}
+
+.btn-remove {
+    color: white;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #920c16;
+    padding: 1em 1em;
+    text-decoration: none;
+}
+
+#accidentGroup {
+    display: none;
+}

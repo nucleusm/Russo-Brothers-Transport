@@ -1,0 +1,6 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+# Useful .gitignore templates: https://github.com/github/gitignore
+application/driver/php/settings/settings.php
+application/office/php/settings/settings.php
+resources/

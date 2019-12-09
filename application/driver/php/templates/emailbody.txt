@@ -1,0 +1,677 @@
+
+                                 <b>Someone just applied as a driver:</b>
+            <br><h3>1. OWNERS IDENTIFICATION</h3><b>Full Name:</b> '.$idName.' <br> <b>Date of Birth</b>: '.$idDob.' <br> <b>Social Security:</b> '.$idSs.' <br> <b>Address:</b> '.$idAddress.' <br> <b>City:</b> '.$idCity.' <br> <b>State:</b> '.$idState.' <br> <b>Zipcode</b> '.$idZip.' <br> <b> Phone:</b> '.$idPhone.'<br><b>Email:</b> '.$idEmail.'<br><b>Physical Exam Expiration Date: </b> '.$idPhysical.' <br> <b>Have you worked for this company before:</b> '.$idRusso.' 
+            <br><br>
+            <h3>2. PREVIOUS ADDRESSES</h3>
+        <table style="border: 1px solid black; width: 100%;">
+          <tr>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zipcode</th>
+          </tr>
+          <tr>
+            <td>'.$prevAddress0.'</td>
+            <td>'.$prevCity0.'</td>
+            <td>'.$prevState0.'</td>
+            <td>'.$prevZip0.'</td>
+          </tr>
+          <tr>
+            <td>'.$prevAddress1.'</td>
+            <td>'.$prevCity1.'</td>
+            <td>'.$prevState1.'</td>
+            <td>'.$prevZip1.'</td>
+          </tr>
+            <tr>
+            <td>'.$prevAddress2.'</td>
+            <td>'.$prevCity2.'</td>
+            <td>'.$prevState2.'</td>
+            <td>'.$prevZip2.'</td>
+          </tr>
+            <tr>
+            <td>'.$prevAddress3.'</td>
+            <td>'.$prevCity3.'</td>
+            <td>'.$prevState3.'</td>
+            <td>'.$prevZip3.'</td>
+          </tr>
+            <tr>
+            <td>'.$prevAddress4.'</td>
+            <td>'.$prevCity4.'</td>
+            <td>'.$prevState4.'</td>
+            <td>'.$prevZip4.'</td>
+          </tr>
+            <tr>
+            <td>'.$prevAddress5.'</td>
+            <td>'.$prevCity5.'</td>
+            <td>'.$prevState5.'</td>
+            <td>'.$prevZip5.'</td>
+          </tr>
+            <tr>
+            <td>'.$prevAddress6.'</td>
+            <td>'.$prevCity6.'</td>
+            <td>'.$prevState6.'</td>
+            <td>'.$prevZip6.'</td>
+          </tr>
+            <tr>
+            <td>'.$prevAddress7.'</td>
+            <td>'.$prevCity7.'</td>
+            <td>'.$prevState7.'</td>
+            <td>'.$prevZip7.'</td>
+          </tr>
+            <tr>
+            <td>'.$prevAddress8.'</td>
+            <td>'.$prevCity8.'</td>
+            <td>'.$prevState8.'</td>
+            <td>'.$prevZip8.'</td>
+          </tr>
+            <tr>
+            <td>'.$prevAddress9.'</td>
+            <td>'.$prevCity9.'</td>
+            <td>'.$prevState9.'</td>
+            <td>'.$prevZip9.'</td>
+          </tr>
+        </table>
+        <h3>3. DRIVERS LICENSE</h3>
+          <table style="border: 1px solid black; width: 100%;">
+          <tr>
+            <th>CDL/CPL#</th>
+            <th>State</th>
+            <th>Expiration Date</th>
+            <th>Class</th>
+            <th>Endorsements</th>
+          </tr>
+          <tr>
+            <td>'.$drCdl0.'</td>
+            <td>'.$drState0.'</td>
+            <td>'.$drDate0.'</td>
+            <td>'.$drClass0.'</td>
+            <td>'.$drEndorsement0.'</td>
+          </tr>
+          <tr>
+            <td>'.$drCdl1.'</td>
+            <td>'.$drState1.'</td>
+            <td>'.$drDate1.'</td>
+            <td>'.$drClass1.'</td>
+            <td>'.$drEndorsement1.'</td>
+          </tr>
+            <tr>
+            <td>'.$drCdl2.'</td>
+            <td>'.$drState2.'</td>
+            <td>'.$drDate2.'</td>
+            <td>'.$drClass2.'</td>
+            <td>'.$drEndorsement2.'</td>
+          </tr>
+            <tr>
+            <td>'.$drCdl3.'</td>
+            <td>'.$drState3.'</td>
+            <td>'.$drDate3.'</td>
+            <td>'.$drClass3.'</td>
+            <td>'.$drEndorsement3.'</td>
+          </tr>
+            <tr>
+            <td>'.$drCdl4.'</td>
+            <td>'.$drState4.'</td>
+            <td>'.$drDate4.'</td>
+            <td>'.$drClass4.'</td>
+            <td>'.$drEndorsement4.'</td>
+          </tr>
+            <tr>
+            <td>'.$drCdl5.'</td>
+            <td>'.$drState5.'</td>
+            <td>'.$drDate5.'</td>
+            <td>'.$drClass5.'</td>
+            <td>'.$drEndorsement5.'</td>
+          </tr>
+            <tr>
+            <td>'.$drCdl6.'</td>
+            <td>'.$drState6.'</td>
+            <td>'.$drDate6.'</td>
+            <td>'.$drClass6.'</td>
+            <td>'.$drEndorsement6.'</td>
+          </tr>
+            <tr>
+            <td>'.$drCdl7.'</td>
+            <td>'.$drState7.'</td>
+            <td>'.$drDate7.'</td>
+            <td>'.$drClass7.'</td>
+            <td>'.$drEndorsement7.'</td>
+          </tr>
+            <tr>
+            <td>'.$drCdl8.'</td>
+            <td>'.$drState8.'</td>
+            <td>'.$drDate8.'</td>
+            <td>'.$drClass8.'</td>
+            <td>'.$drEndorsement8.'</td>
+          </tr>
+            <tr>
+            <td>'.$drCdl9.'</td>
+            <td>'.$drState9.'</td>
+            <td>'.$drDate9.'</td>
+            <td>'.$drClass9.'</td>
+            <td>'.$drEndorsement9.'</td>
+          </tr>
+        </table>
+        <h3>4. DRIVING EXPERIENCE</h3>
+        <table style="border: 1px solid black; width: 100%;">
+          <tr>
+            <th>Type of equipment</th>
+            <th>Date From</th>
+            <th>Date To</th>
+            <th>Approximate Miles</th>
+          </tr>
+          <tr>
+            <th>Truck</th>
+            <td>'.$expTruckFrom.'</td>
+            <td>'.$expTruckTo.'</td>
+            <td>'.$expTruckMiles.'</td>
+          </tr>
+          <tr>
+            <th>Truck-Tractor</th>
+            <td>'.$expTractorFrom.'</td>
+            <td>'.$expTractorTo.'</td>
+            <td>'.$expTractorMiles.'</td>
+          </tr>
+        <tr>
+            <th>Semitrailer Full Trailer</th>
+            <td>'.$expTrailerFrom.'</td>
+            <td>'.$expTrailerTo.'</td>
+            <td>'.$expTrailerMiles.'</td>
+          </tr>
+            <tr>
+            <th>Others</th>
+            <td>'.$expOtherFrom.'</td>
+            <td>'.$expOtherTo.'</td>
+            <td>'.$expOtherMiles.'</td>
+          </tr>
+        </table>
+        <br> 
+        <b>State: </b>'.$alabama.' '.$alaska.' '.$arizona.' '.$arkansas.' '.$california.' '.$colorado.' '.$connecticut.' '.$delaware.' '.$florida.' '.$georgia.' '.$hawaii.' '.$idaho.' '.$illinois.' '.$indiana.' '.$iowa.' '.$kansas.' '.$kentucky.' '.$louisiana.' '.$maine.' '.$maryland.' '.$massachusetts.' '.$michigan.' '.$minnesota.' '.$mississippi.' '.$missouri.' '.$montana.' '.$nebraska.' '.$nevada.' '.$newhampshire.' '.$newjersey.' '.$newmexico.' '.$newyork.' '.$northcarolina.' '.$northdakota.' '.$ohio.' '.$oklahoma.' '.$oregon.' '.$pennsylvania.' '.$rhodeisland.' '.$southcarolina.' '.$southdakota.' '.$tennessee.' '.$texas.' '.$utah.' '.$vermont.' '.$virginia.' '.$washington.' '.$westvirginia.' '.$wisconsin.' '.$wyoming.'
+        <p><b>List driving courses, if any: </b>'.$expDrivingCourses.'</p>
+        <p><b>List Safe Driving awards, if any: </b>'.$expSafeDriving.'</p>
+
+        <h3>5. ACCIDENT RECORD</h3>
+          <table style="border: 1px solid black; width: 100%;">
+          <tr>
+            <th>Nature of Accident</th>
+            <th>Location</th>
+            <th>Accident Date</th>
+            <th>Fatalities</th>
+            <th>Injuries</th>
+          </tr>
+          <tr>
+            <td>'.$accidentNature0.'</td>
+            <td>'.$accidentLocation0.'</td>
+            <td>'.$accidentDate0.'</td>
+            <td>'.$accidentFatalities0.'</td>
+            <td>'.$accidentInjuries0.'</td>
+          </tr>
+          <tr>
+            <td>'.$accidentNature1.'</td>
+            <td>'.$accidentLocation1.'</td>
+            <td>'.$accidentDate1.'</td>
+            <td>'.$accidentFatalities1.'</td>
+            <td>'.$accidentInjuries1.'</td>
+          </tr>
+            <tr>
+            <td>'.$accidentNature2.'</td>
+            <td>'.$accidentLocation2.'</td>
+            <td>'.$accidentDate2.'</td>
+            <td>'.$accidentFatalities2.'</td>
+            <td>'.$accidentInjuries2.'</td>
+          </tr>
+            <tr>
+            <td>'.$accidentNature3.'</td>
+            <td>'.$accidentLocation3.'</td>
+            <td>'.$accidentDate3.'</td>
+            <td>'.$accidentFatalities3.'</td>
+            <td>'.$accidentInjuries3.'</td>
+          </tr>
+            <tr>
+            <td>'.$accidentNature4.'</td>
+            <td>'.$accidentLocation4.'</td>
+            <td>'.$accidentDate4.'</td>
+            <td>'.$accidentFatalities4.'</td>
+            <td>'.$accidentInjuries4.'</td>
+          </tr>
+            <tr>
+            <td>'.$accidentNature5.'</td>
+            <td>'.$accidentLocation5.'</td>
+            <td>'.$accidentDate5.'</td>
+            <td>'.$accidentFatalities5.'</td>
+            <td>'.$accidentInjuries5.'</td>
+          </tr>
+            <tr>
+            <td>'.$accidentNature6.'</td>
+            <td>'.$accidentLocation6.'</td>
+            <td>'.$accidentDate6.'</td>
+            <td>'.$accidentFatalities6.'</td>
+            <td>'.$accidentInjuries6.'</td>
+          </tr>
+            <tr>
+            <td>'.$accidentNature7.'</td>
+            <td>'.$accidentLocation7.'</td>
+            <td>'.$accidentDate7.'</td>
+            <td>'.$accidentFatalities7.'</td>
+            <td>'.$accidentInjuries7.'</td>
+          </tr>
+            <tr>
+            <td>'.$accidentNature8.'</td>
+            <td>'.$accidentLocation8.'</td>
+            <td>'.$accidentDate8.'</td>
+            <td>'.$accidentFatalities8.'</td>
+            <td>'.$accidentInjuries8.'</td>
+          </tr>
+            <tr>
+            <td>'.$accidentNature9.'</td>
+            <td>'.$accidentLocation9.'</td>
+            <td>'.$accidentDate9.'</td>
+            <td>'.$accidentFatalities9.'</td>
+            <td>'.$accidentInjuries9.'</td>
+          </tr>
+        </table>
+        <h3>6. RECORD OF VIOLATIONS</h3>
+          <table style="border: 1px solid black; width: 100%;">
+          <tr>
+            <th>Offense</th>
+            <th>Location</th>
+            <th>Date of Conviction</th>
+            <th>Vehicle Operated</th>
+            <th>Penalty</th>
+          </tr>
+          <tr>
+            <td>'.$violationOffense0.'</td>
+            <td>'.$violationLocation0.'</td>
+            <td>'.$violationDate0.'</td>
+            <td>'.$violationPenalty0.'</td>
+            <td>'.$violationOperated0.'</td>
+          </tr>
+          <tr>
+            <td>'.$violationOffense1.'</td>
+            <td>'.$violationLocation1.'</td>
+            <td>'.$violationDate1.'</td>
+            <td>'.$violationPenalty1.'</td>
+            <td>'.$violationOperated1.'</td>
+          </tr>
+            <tr>
+            <td>'.$violationOffense2.'</td>
+            <td>'.$violationLocation2.'</td>
+            <td>'.$violationDate2.'</td>
+            <td>'.$violationPenalty2.'</td>
+            <td>'.$violationOperated2.'</td>
+          </tr>
+            <tr>
+            <td>'.$violationOffense3.'</td>
+            <td>'.$violationLocation3.'</td>
+            <td>'.$violationDate3.'</td>
+            <td>'.$violationPenalty3.'</td>
+            <td>'.$violationOperated3.'</td>
+          </tr>
+            <tr>
+            <td>'.$violationOffense4.'</td>
+            <td>'.$violationLocation4.'</td>
+            <td>'.$violationDate4.'</td>
+            <td>'.$violationPenalty4.'</td>
+            <td>'.$violationOperated4.'</td>
+          </tr>
+            <tr>
+            <td>'.$violationOffense5.'</td>
+            <td>'.$violationLocation5.'</td>
+            <td>'.$violationDate5.'</td>
+            <td>'.$violationPenalty5.'</td>
+            <td>'.$violationOperated5.'</td>
+          </tr>
+            <tr>
+            <td>'.$violationOffense6.'</td>
+            <td>'.$violationLocation6.'</td>
+            <td>'.$violationDate6.'</td>
+            <td>'.$violationPenalty6.'</td>
+            <td>'.$violationOperated6.'</td>
+          </tr>
+            <tr>
+            <td>'.$violationOffense7.'</td>
+            <td>'.$violationLocation7.'</td>
+            <td>'.$violationDate7.'</td>
+            <td>'.$violationPenalty7.'</td>
+            <td>'.$violationOperated7.'</td>
+          </tr>
+            <tr>
+            <td>'.$violationOffense8.'</td>
+            <td>'.$violationLocation8.'</td>
+            <td>'.$violationDate8.'</td>
+            <td>'.$violationPenalty8.'</td>
+            <td>'.$violationOperated8.'</td>
+          </tr>
+            <tr>
+            <td>'.$violationOffense9.'</td>
+            <td>'.$violationLocation9.'</td>
+            <td>'.$violationDate9.'</td>
+            <td>'.$violationPenalty9.'</td>
+            <td>'.$violationOperated9.'</td>
+          </tr>
+        </table>
+        <h3>7. DENIAL, REVOCATION OR SUSPENSION OF DRIVERS LICENSE/PERMIT</h3>
+        <p><b>Have you ever been denied a license, permit or privilege to operate a commercial motor vehicle?</b> '.$drsDenied.'</p>
+        <p><b>Details:</b> '.$drsDeniedDetail.'</p>
+        <br>
+        <p><b>Have you ever had a license, permit or privilege to operate a commercial motor vehicle suspended or revoked?</b> '.$drsSuspended.'</p>
+        <p><b>Details:</b> '.$drsSuspendedDetail.'</p>
+        <br>
+        <p><b>Have you ever been denied a license, permit or privilege to operate a commercial motor vehicle?</b> '.$drsUnable.'</p>
+        <p><b>Details:</b> '.$drsUnableDetail.'</p>
+        <br>
+        <p><b>Have you ever been denied a license, permit or privilege to operate a commercial motor vehicle?</b> '.$drsMedication.'</p>
+        <p><b>Details:</b> '.$drsMedicationDetail.'</p>
+
+
+        <h3>8. PREVIOUS RESULTS FOR CONTROLLED SUBSTANCES TESTS</h3>
+        <p><b>A. Obtained verified positive results for controlled substance tests required by other companies?</b> '.$csVerified.'</p>
+        <br>
+        <p><b>B. Obtained alcohol tests results indicating 0.04 or higher alcohol concentration?</b> '.$csAlcohol.'</p>
+        <br>
+        <p><b>C. Refused to undergo alcohol or controlled substance testing required by other companies?</b> '.$csRefused.'</p>
+        <br>
+        <p><b> Name of SAP </b> '.$csName.'</p>
+        <p><b>Address</b> '.$csAddress.'</p>
+        <p><b>Phone Number</b> '.$csPhone.'</p>
+        <p><b>Date visited</b> '.$csDate.'</p>
+
+        <h3>9. PREVIOUS CONTACTS WITH MOTOR CARRIERS</h3>
+          <table style="border: 1px solid black; width: 100%;">
+          <tr>
+            <th>Carriers Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Fax Number</th>
+            <th>Date From</th>
+            <th>Date To</th>
+            <th>Reason for leaving</th>
+          </tr>
+          <tr>
+            <td>'.$carrierName0.'</td>
+            <td>'.$carrierAddress0.'</td>
+            <td>'.$carrierPhone0.'</td>
+            <td>'.$carrierFax0.'</td>
+            <td>'.$carrierDateFrom0.'</td>
+            <td>'.$carrierDateTo0.'</td>
+            <td>'.$carrierReason0.'</td>
+          </tr>
+          <tr>
+            <td>'.$carrierName1.'</td>
+            <td>'.$carrierAddress1.'</td>
+            <td>'.$carrierPhone1.'</td>
+            <td>'.$carrierFax1.'</td>
+            <td>'.$carrierDateFrom1.'</td>
+            <td>'.$carrierDateTo1.'</td>
+            <td>'.$carrierReason1.'</td>
+          </tr>
+            <tr>
+            <td>'.$carrierName2.'</td>
+            <td>'.$carrierAddress2.'</td>
+            <td>'.$carrierPhone2.'</td>
+            <td>'.$carrierFax2.'</td>
+            <td>'.$carrierDateFrom2.'</td>
+            <td>'.$carrierDateTo2.'</td>
+            <td>'.$carrierReason2.'</td>
+          </tr>
+            <tr>
+            <td>'.$carrierName3.'</td>
+            <td>'.$carrierAddress3.'</td>
+            <td>'.$carrierPhone3.'</td>
+            <td>'.$carrierFax3.'</td>
+            <td>'.$carrierDateFrom3.'</td>
+            <td>'.$carrierDateTo3.'</td>
+            <td>'.$carrierReason3.'</td>
+          </tr>
+            <tr>
+            <td>'.$carrierName4.'</td>
+            <td>'.$carrierAddress4.'</td>
+            <td>'.$carrierPhone4.'</td>
+            <td>'.$carrierFax4.'</td>
+            <td>'.$carrierDateFrom4.'</td>
+            <td>'.$carrierDateTo4.'</td>
+            <td>'.$carrierReason4.'</td>
+          </tr>
+            <tr>
+            <td>'.$carrierName5.'</td>
+            <td>'.$carrierAddress5.'</td>
+            <td>'.$carrierPhone5.'</td>
+            <td>'.$carrierFax5.'</td>
+            <td>'.$carrierDateFrom5.'</td>
+            <td>'.$carrierDateTo5.'</td>
+            <td>'.$carrierReason5.'</td>
+          </tr>
+            <tr>
+            <td>'.$carrierName6.'</td>
+            <td>'.$carrierAddress6.'</td>
+            <td>'.$carrierPhone6.'</td>
+            <td>'.$carrierFax6.'</td>
+            <td>'.$carrierDateFrom6.'</td>
+            <td>'.$carrierDateTo6.'</td>
+            <td>'.$carrierReason6.'</td>
+          </tr>
+            <tr>
+            <td>'.$carrierName7.'</td>
+            <td>'.$carrierAddress7.'</td>
+            <td>'.$carrierPhone7.'</td>
+            <td>'.$carrierFax7.'</td>
+            <td>'.$carrierDateFrom7.'</td>
+            <td>'.$carrierDateTo7.'</td>
+            <td>'.$carrierReason7.'</td>
+          </tr>
+          </table>
+            <tr>
+            <td>'.$carrierName8.'</td>
+            <td>'.$carrierAddress8.'</td>
+            <td>'.$carrierPhone8.'</td>
+            <td>'.$carrierFax8.'</td>
+            <td>'.$carrierDateFrom8.'</td>
+            <td>'.$carrierDateTo8.'</td>
+            <td>'.$carrierReason8.'</td>
+          </tr>
+          </table>
+            <tr>
+            <td>'.$carrierName9.'</td>
+            <td>'.$carrierAddress9.'</td>
+            <td>'.$carrierPhone9.'</td>
+            <td>'.$carrierFax9.'</td>
+            <td>'.$carrierDateFrom9.'</td>
+            <td>'.$carrierDateTo9.'</td>
+            <td>'.$carrierReason9.'</td>
+          </tr>
+        </table>
+        <p><b>Were you subject to the FMCSRs while employed here?</b> '.$carrierSubject.'</p>
+        <p><b>Was your job designated as a safety-sensitive function in any DOT-Regulated mode subject to the drug and alcohol testing requirement of 49 CFR Part 40?</b> '.$carrierDesignated.'</p>
+        
+        <h3>10. PERSONAL REFERENCES</h3>
+        <table style="border: 1px solid black; width: 100%;">
+          <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+          </tr>
+            <tr>
+            <td>'.$referencesName1.'</td>
+            <td>'.$referencesPhone1.'</td>
+            <td>'.$referencesAddress1.'</td>
+          </tr>
+          <tr>
+            <td>'.$referencesName2.'</td>
+            <td>'.$referencesPhone2.'</td>
+            <td>'.$referencesAddress2.'</td>
+          </tr>
+          <tr>
+            <td>'.$referencesName3.'</td>
+            <td>'.$referencesPhone3.'</td>
+            <td>'.$referencesAddress3.'</td>
+          </tr>
+        </table>
+
+        <h3>11. CERTIFICATION</h3>
+        <p>391.23(i)(1) The prospective employer must expressly notify drivers with Department of Transportation regulated employment during the preceding three years-via the application form or other written document prior to any hiring decision-that he or she has the following rights regarding the investigative information that will be provided to the prospective employer pursuant to paragraphs (d) and (e) of this section:</p>
+        <p>(i)(1)(i) The right to review information provided by previous employers;</p>
+        <p>(i)(1)(ii) The right to have errors in the information corrected by the previous employer and for that previous employer to re-send the corrected information to the prospective employer;</p>
+        <p>(i)(1)(iii) The right to have a rebuttal statement attached to the alleged erroneous information, if the previous employer and the driver cannot agree on the accuracy of the information.</p>
+        <p>(i)(2) Drivers who have previous Department of Transportation regulated employment history in the preceding three years, and wish to review previous employer-provided investigative information must submit a written request to the prospective employer, which may be done at any time, including when applying, or as late as 30 days after being employed or being notified of denial of employment. The prospective employer must provide this information to the applicant within five (5) business days of receiving the written request. If the prospective employer has not yet received the requested information from the previous employer(s), then the five-business day’s deadline will begin when the prospective employer receives the requested safety performance history information. If the driver has not arranged to pick up or receive the requested records within thirty (30) days of the prospective employer making them available, the prospective motor carrier may consider the driver to have waived his/her request to review the records. Visit www.fmcsa.dot.cjov to review the regulations.</p>
+        <p>This certifies that this application was completed by me, and that all entries on it and information in it are true and complete to the best of my knowledge.</p>
+        <p><b>Full Name:</b> '.$certificationName.'</p>
+        <p><b>Date:</b> '.$certificationDate.'</p>
+        <h3>RECORD OF VIOLTIONS 49 CFR § 391.27</h3>
+        <p>I certify that the following is a true and complete list of violations of motor vehicles traffic laws and ordinances (other than violations involving parking only) of which I was convicted or forfeited bond or collateral during the past twelve months.</p>
+        
+
+        <h3>AUTHORIZATION TO RELEASE DRUG AND ALCOHOL TESTING INFORMATION</h3>
+        <p>Pursuant to 49 CFR §40.25, I hereby authorize the companies listed below to furnish to RUSSO BROTHERS TRANSPORT INC, with address at ,8200 Berry Ave Suite 160 Sacramento, CA 95828, the following information concerning controlled substances and alcohol tests I have been involved during the last 3 years: (1) whether I had alcohol tests with a result of 0.04 or higher alcohol concentration, the dates of such test(s) and the alcohol concentration then recorded; (2) whether I had verified positive drug tests, the date of such test(s) and the controlled substance(s) involved; (3) whether I have refused to be tested (including verified adulterated or substituted drug test results) and the dates of refusal; (4) whether I committed other violations of DOT drug and alcohol testing regulations and the dates and circumstances of each violation. I further authorize the companies listed below to furnish the name and phone number of any Substance Abuse Professional who evaluated me during the past three years, all supporting documentation and follow-up tests in accordance with 49 CFR §40.25(b)(5).</p>
+        <table style="border: 1px solid black; width: 100%;">
+          <tr>
+            <th>Company</th>
+            <th>Contact Name</th>
+            <th>Phone Number</th>
+            <th>Fax Number</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip Code</th>
+          </tr>
+          <tr>
+            <td>'.$authCompany0.'</td>
+            <td>'.$authContact0.'</td>
+            <td>'.$authPhone0.'</td>
+            <td>'.$authFax0.'</td>
+            <td>'.$authAddress0.'</td>
+            <td>'.$authCity0.'</td>
+            <td>'.$authState0.'</td>
+            <td>'.$authZip0.'</td>
+          </tr>
+          <tr>
+            <td>'.$authCompany1.'</td>
+            <td>'.$authContact1.'</td>
+            <td>'.$authPhone1.'</td>
+            <td>'.$authFax1.'</td>
+            <td>'.$authAddress1.'</td>
+            <td>'.$authCity1.'</td>
+            <td>'.$authState1.'</td>
+            <td>'.$authZip1.'</td>
+          </tr>
+            <tr>
+            <td>'.$authCompany2.'</td>
+            <td>'.$authContact2.'</td>
+            <td>'.$authPhone2.'</td>
+            <td>'.$authFax2.'</td>
+            <td>'.$authAddress2.'</td>
+            <td>'.$authCity2.'</td>
+            <td>'.$authState2.'</td>
+            <td>'.$authZip2.'</td>
+          </tr>
+            <tr>
+            <td>'.$authCompany3.'</td>
+            <td>'.$authContact3.'</td>
+            <td>'.$authPhone3.'</td>
+            <td>'.$authFax3.'</td>
+            <td>'.$authAddress3.'</td>
+            <td>'.$authCity3.'</td>
+            <td>'.$authState3.'</td>
+            <td>'.$authZip3.'</td>
+          </tr>
+            <tr>
+            <td>'.$authCompany4.'</td>
+            <td>'.$authContact4.'</td>
+            <td>'.$authPhone4.'</td>
+            <td>'.$authFax4.'</td>
+            <td>'.$authAddress4.'</td>
+            <td>'.$authCity4.'</td>
+            <td>'.$authState4.'</td>
+            <td>'.$authZip4.'</td>
+          </tr>
+            <tr>
+            <td>'.$authCompany5.'</td>
+            <td>'.$authContact5.'</td>
+            <td>'.$authPhone5.'</td>
+            <td>'.$authFax5.'</td>
+            <td>'.$authAddress5.'</td>
+            <td>'.$authCity5.'</td>
+            <td>'.$authState5.'</td>
+            <td>'.$authZip5.'</td>
+          </tr>
+            <tr>
+            <td>'.$authCompany6.'</td>
+            <td>'.$authContact6.'</td>
+            <td>'.$authPhone6.'</td>
+            <td>'.$authFax6.'</td>
+            <td>'.$authAddress6.'</td>
+            <td>'.$authCity6.'</td>
+            <td>'.$authState6.'</td>
+            <td>'.$authZip6.'</td>
+          </tr>
+            <tr>
+            <td>'.$authCompany7.'</td>
+            <td>'.$authContact7.'</td>
+            <td>'.$authPhone7.'</td>
+            <td>'.$authFax7.'</td>
+            <td>'.$authAddress7.'</td>
+            <td>'.$authCity7.'</td>
+            <td>'.$authState7.'</td>
+            <td>'.$authZip7.'</td>
+          </tr>
+          </table>
+            <tr>
+            <td>'.$authCompany8.'</td>
+            <td>'.$authContact8.'</td>
+            <td>'.$authPhone8.'</td>
+            <td>'.$authFax8.'</td>
+            <td>'.$authAddress8.'</td>
+            <td>'.$authCity8.'</td>
+            <td>'.$authState8.'</td>
+            <td>'.$authZip8.'</td>
+          </tr>
+          </table>
+            <tr>
+            <td>'.$authCompany9.'</td>
+            <td>'.$authContact9.'</td>
+            <td>'.$authPhone9.'</td>
+            <td>'.$authFax9.'</td>
+            <td>'.$authAddress9.'</td>
+            <td>'.$authCity9.'</td>
+            <td>'.$authState9.'</td>
+            <td>'.$authZip9.'</td>
+          </tr>
+        </table>
+        <br>
+        <p><b>Owners Name:</b> '.$authName.'</p>
+        <p><b>Social Security:</b> '.$authSs.'</p>
+        <p><b>Date:</b> '.$authDate.'</p>
+        <h3>ACKNOWLEDGEMENT OF ANTI-DRUG POLICIES AND PROCEDURES</h3>
+        <p>This policy statement acknowledgment is intended to comply with all applicable Drug Free Workplace regulations governing anti-drug programs in the workplace. Those programs mandate urine drug testing and breathalyzer or saliva alcohol testing and prevent performance of job duties when there is a positive test result.</p>
+        <p>As an independent contractor rendering services for RUSSO BROTHERS TRANSPORT INC, I am prohibited from taking the following controlled substances:</p>
+        <p><u>Drugs:</u> 6-Acetylmorphine, Amphetamines, Cocaine Metabolites, Marijuana Metabolites, MDA-Analogues, Opiates, Opiates (Semi-Synthetic), Oxycodone’s, Phencyclidine.</p>
+        <p><u>Alcohol:</u> This use of beverages or substances, including any medication containing alcohol such that it is present in the body at a level in excess of that stated in Department of Transportation guidelines while actually performing, ready to perform, or immediately available to perform is prohibited. "Alcohol" is defined as: the intoxicating agent in beverage alcohol, ethyl alcohol, or other low molecular-weight alcohol, including ethyl or isopropyl alcohol. </p>
+        <p><b>Under Drug Free Workplace Regulation:</b></p>
+        <p>1. I may not engage in the unlawful manufacture, distribution, dispensing, possession or use of a controlled substance or alcohol while performing my job duties.</p>
+        <p>2. I may not be impaired or under the influence of a prohibited substance, or not be fit for duty. If I fail to pass (where there is a quantifiable presence of a prohibited substance in the body above the minimum thresholds defined by Federal Guidelines) a controlled substance or alcohol test, I will remain off duty and seek treatment. I may not report for duty or remain on duty when my ability to perform job is adversely affected by alcohol or when I have a breath alcohol concentration of 0.04 or greater. I may not use alcohol within four hours of reporting for duty nor during hours that I am on call.</p>
+        <p>3. I am subject to controlled substance testing and breathe alcohol testing and may not refuse to comply with a request for testing, provide false information in connection with a test or attempt to falsify test results through tampering, contamination, adulteration, or substitution. Refusal to submit to a test can include an inability to provide a urine specimen or breathe sample without a valid medical explanation, as well as a verbal declaration, obstructive behavior or physical absence resulting in the inability to conduct the test.</p>
+        <p>4. If I test positive for controlled substances or alcohol, I must: (1) be evaluated by a Substance Abuse Professional (SAP), (2) participate in and complete the rehabilitation program required by the SAP, (3) be released to duty by the SAP, and (4) test negative on a return-to-duty controlled substances and/or alcohol test before returning to duty. In addition, I will be required to undergo unannounced follow-up controlled substance and/or alcohol breath testing following returning to duty. The duration and frequency will be determined by the SAP. However, it shall not be less than 6 tests during the first 12 months, or longer than 60 months in total, following return to duty.</p>
+        <p><b>As an independent contractor rendering services for RUSSO BROTHERS TRANSPORT INC, I may be tested under any of the following circumstances:</b></p>
+        <p><u>Pre-Enrollment Testing:</u> A operator of motor vehicles who wishes to render services for RUSSO BROTHERS TRANSPORT INC. will be required to undergo urine controlled substance testing prior to the commencement of services. Receipt of satisfactory test result is required and failure of a controlled substance test will disqualify me from performing services for Russo Brothers Transport, Inc.</p>
+        <p><u>Reasonable Suspicion Testing:</u> I will be subject to urine and/or breath testing when there is a reason to believe that controlled substances or alcohol use is adversely affecting my performance of services that I agreed to render to RUSSO BROTHERS TRANSPORT INC. A reasonable suspicion referral for testing may be made by a trained employee RUSSO BROTHERS TRANSPORT INC. on the basis of documented objective facts and circumstances which are consistent with the effects of substance abuse. </p>
+        <p>Examples of reasonable suspicion include, but are limited to, the following:</p>
+        <ul>
+            <li>1. Adequate documentation of unsatisfactory performance of contracted services or of inadequate behavior while performing services. 
+            </li>
+            <li>2. Physical signs and symptoms consistent with prohibited substance use. 
+            </li>
+            <li>3. Occurrence of a serious or potentially serious accident that may have been caused by human error. 
+            </li>
+            <li>4. Fights (to mean physical contact), assaults and flagrant disregard or violations of estimated safety, security, or other operation procedures. 
+            </li>
+        </ul>
+        <p><b>Post-Accident Testing: I will be required to undergo controlled substance and/or breath alcohol testing if I am involved in an accident which results in a fatality, results in injuries requiring transportation to a medical treatment facility, where there is significant property damage, or if there is an injury as defined by Workers Compensation Guidelines.</p></b>
+        <p>Following an accident, I must be tested as soon as possible, but not to exceed 8 hours for alcohol and 32 hours for controlled substances. I may not leave the scene of the accident without appropriate authorization from law enforcement prior to submission to controlled substance and/or alcohol testing.</p>
+        <p><u>Random Testing:</u> I will be subjected to random, unannounced testing. The random selection will be by a scientifically valid method. I will have an equal chance of being tested each time selections are made.</p>
+        <p><u>Follow-Up Testing:</u> I understand that I will be subject to at least six unannounced follow-up alcohol and/or controlled substances testing as directed by a substance abuse professional, if company determines that I am in need of assistance in resolving problems associated with alcohol misuse and/or use of controlled substances. Title 49, Part 382.811.</p>
+        <p><u>Return-to-services Testing:</u> If tested positive for controlled substances or if my alcohol concentration is above the limits set forth by the DOT regulations, I must be assessed by a Substance Abuse Professional (SAP). An SAP is a licensed physician, psychologist, social worker, employee assistance professional or addiction counselor with knowledge of and clinical experience in the diagnosis and treatment of alcohol related disorders. The Sap will evaluate me to determine what assistance, if any, I need in resolving problems associated with abuse of controlled substances.</p>
+        <p><b>Date:</b> '.$ackDate.'</p>
+        <p><b>Full Name:</b> '.$ackName.'</p>
+
+        <h3>CERTIFIED RECEIPT FOR DRUG & ALCOHOL POLICY</h3>
+        <p>I, the applicant, hereby certify that I have received a copy of the Drug and Alcohol Policy and that I am familiar with all of the information contained within it. </p>
+        <p><b>Date:</b> '.$dapolicyDate.'</p>
+        <p><b>Full Name:</b> '.$dapolicyName.'</p>
