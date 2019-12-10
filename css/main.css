@@ -102,11 +102,19 @@ textarea {
    ========================================================================== */
 
 
+/* Custom Props */
+
+:root {
+	--main-box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
+	--main-color-red: #920c16;
+	--main-font-color: #232323;
+	--main-hover-color: #f18984;
+}
+
 
 body {
   background-color: #E8E8E8;
-  color: #232323;
-  background-color: #e8e8e8;
+  color: var(--main-font-color);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23b4b4b4' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
@@ -122,7 +130,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #920c16;
+  color: var(--main-color-red);
 }
 
 h2 {
@@ -153,22 +161,22 @@ select {
 
 button {
   background-color: transparent;
-  color: #920c16;
+  color: var(--main-color-red);
   border-radius: 0;
 }
 
 hr {
-  border-color: #920c16;
+  border-color: var(--main-color-red);
 }
 
 a:link,
 a:visited {
-  color: #920c16;
+  color: var(--main-color-red);
 
 }
 
 a:hover {
-  color: #920c16}
+  color: var(--main-color-red)}
 
 footer {
   background-color: white;
@@ -225,7 +233,7 @@ label {
   margin-top: -80px;
   border: 5px solid #f6f6f6;
   padding: 2rem 3rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
+  box-shadow: var(--main-box-shadow);
 }
 
 .state-error {
@@ -252,10 +260,10 @@ label {
 
 .btn-custom {
 
-  border: 1px solid #920c16;
+  border: 1px solid var(--main-color-red);
   border-radius: 0;
   background-color: transparent;
-  color: #920c16;
+  color: var(--main-color-red);
   padding: 3;
 }
 .btn-custom:hover {
@@ -269,7 +277,7 @@ label {
 
 .btn-rate {
   background-color: transparent;
-  color: #232323;
+  color: var(--main-font-color);
   padding: 0;
 }
 
@@ -293,7 +301,7 @@ label {
 .card-custom {
   border: 0;
   border-radius: 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
+  box-shadow: var(--main-box-shadow);
 }
 
 .card-body {
@@ -305,7 +313,7 @@ label {
 }
 
 .card-border {
-  border-left: 6px solid #920c16;
+  border-left: 6px solid var(--main-color-red);
 }
 
 .serif-font {
@@ -328,14 +336,14 @@ label {
 }
 
 .nav-item > a:hover {
-  color: #f18984;
+  color: var(--main-hover-color);
 }
 .nav-toggler-button {
   border: none;
 }
 
 .dark-font {
-  color: #232323;
+  color: var(--main-font-color);
 }
 
 .dropdown-align {
@@ -369,7 +377,7 @@ label {
 .featured-img {
   height: 325px;
   width: 325px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
+  box-shadow: var(--main-box-shadow);
 }
 
 .navbar-brand {
@@ -433,7 +441,7 @@ label {
 }
 
 .background-red {
-  background-color: #920c16;
+  background-color: var(--main-color-red);
 }
 .gmap_canvas {
   height: 100%;
@@ -483,7 +491,7 @@ label {
 }
 
 .navbar-custom-bg.scrolled {
-  background-color: #920c16;
+  background-color: var(--main-color-red);
   transition: background-color 200ms linear;
 }
 
@@ -504,7 +512,7 @@ label {
   top: 20px;
   right: 100px;
   background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
+  box-shadow: var(--main-box-shadow);
 }
 
 
@@ -581,11 +589,11 @@ label {
 }
 
 .color-red {
-  color: #920c16;
+  color: var(--main-color-red);
 }
 
 .developed a:hover {
-  color: #f18984;
+  color: var(--main-hover-color);
 }
 
 @media screen and (max-width: 1380px) {
