@@ -1,22 +1,15 @@
 <?php 
-	
+
+if (!isset($_SESSION)) session_start(); 
+if(!$_POST) exit;
+
+include dirname(__FILE__).'/settings/settings.php';
+include dirname(__FILE__).'/functions/emailValidation.php';
 
 
-
-
-
-
-
-	if (!isset($_SESSION)) session_start(); 
-	if(!$_POST) exit;
-	
-	include dirname(__FILE__).'/settings/settings.php';
-	include dirname(__FILE__).'/functions/emailValidation.php';
-	
-	
-	/* Current Date Year
-	------------------------------- */		
-	$currYear = date("Y");	
+/* Current Date Year
+------------------------------- */		
+$currYear = date("Y");	
 	
 
 			
@@ -36,154 +29,59 @@ $idEmail = strip_tags(trim($_POST['idEmail']));
 
 
 //Education
-$eduSchool0 = strip_tags(trim($_POST["eduSchool"][0]));
-$eduSchool1 = strip_tags(trim($_POST["eduSchool"][1]));
-$eduSchool2 = strip_tags(trim($_POST["eduSchool"][2]));
-$eduSchool3 = strip_tags(trim($_POST["eduSchool"][3]));
-$eduSchool4 = strip_tags(trim($_POST["eduSchool"][4]));
-$eduSchool5 = strip_tags(trim($_POST["eduSchool"][5]));
-$eduSchool6 = strip_tags(trim($_POST["eduSchool"][6]));
-$eduSchool7 = strip_tags(trim($_POST["eduSchool"][7]));
-$eduSchool8 = strip_tags(trim($_POST["eduSchool"][8]));
-$eduSchool9 = strip_tags(trim($_POST["eduSchool"][9]));
-
-$eduDegree0 = strip_tags(trim($_POST["eduDegree"][0]));
-$eduDegree1 = strip_tags(trim($_POST["eduDegree"][1]));
-$eduDegree2 = strip_tags(trim($_POST["eduDegree"][2]));
-$eduDegree3 = strip_tags(trim($_POST["eduDegree"][3]));
-$eduDegree4 = strip_tags(trim($_POST["eduDegree"][4]));
-$eduDegree5 = strip_tags(trim($_POST["eduDegree"][5]));
-$eduDegree6 = strip_tags(trim($_POST["eduDegree"][6]));
-$eduDegree7 = strip_tags(trim($_POST["eduDegree"][7]));
-$eduDegree8 = strip_tags(trim($_POST["eduDegree"][8]));
-$eduDegree9 = strip_tags(trim($_POST["eduDegree"][9]));
-
-$eduGraduation0 = strip_tags(trim($_POST["eduGraduation"][0]));
-$eduGraduation1 = strip_tags(trim($_POST["eduGraduation"][1]));
-$eduGraduation2 = strip_tags(trim($_POST["eduGraduation"][2]));
-$eduGraduation3 = strip_tags(trim($_POST["eduGraduation"][3]));
-$eduGraduation4 = strip_tags(trim($_POST["eduGraduation"][4]));
-$eduGraduation5 = strip_tags(trim($_POST["eduGraduation"][5]));
-$eduGraduation6 = strip_tags(trim($_POST["eduGraduation"][6]));
-$eduGraduation7 = strip_tags(trim($_POST["eduGraduation"][7]));
-$eduGraduation8 = strip_tags(trim($_POST["eduGraduation"][8]));
-$eduGraduation9 = strip_tags(trim($_POST["eduGraduation"][9]));
-
+foreach ($_POST["eduSchool"] as $key=>$value) {
+	$eduSchool[$key] = strip_tags(trim($value));
+}
+foreach ($_POST["eduDegree"] as $key=>$value) {
+	$eduDegree[$key] = strip_tags(trim($value));
+}
+foreach ($_POST["eduGraduation"] as $key=>$value) {
+	$eduGraduation[$key] = strip_tags(trim($value));
+}
 $eduCertifications = strip_tags(trim($_POST['eduCertifications']));
 $eduSkills = strip_tags(trim($_POST['eduSkills']));
 
 
 // Drivers License 
-$employmentCompany0 = strip_tags(trim($_POST["employmentCompany"][0]));
-$employmentCompany1 = strip_tags(trim($_POST["employmentCompany"][1]));
-$employmentCompany2 = strip_tags(trim($_POST["employmentCompany"][2]));
-$employmentCompany3 = strip_tags(trim($_POST["employmentCompany"][3]));
-$employmentCompany4 = strip_tags(trim($_POST["employmentCompany"][4]));
-$employmentCompany5 = strip_tags(trim($_POST["employmentCompany"][5]));
-$employmentCompany6 = strip_tags(trim($_POST["employmentCompany"][6]));
-$employmentCompany7 = strip_tags(trim($_POST["employmentCompany"][7]));
-$employmentCompany8 = strip_tags(trim($_POST["employmentCompany"][8]));
-$employmentCompany9 = strip_tags(trim($_POST["employmentCompany"][9]));
+foreach ($_POST["employmentCompany"] as $key=>$value) {
+	$employmentCompany[$key] = strip_tags(trim($value));
+}
 
-$employmentAddress0 = strip_tags(trim($_POST["employmentAddress"][1]));
-$employmentAddress1 = strip_tags(trim($_POST["employmentAddress"][2]));
-$employmentAddress2 = strip_tags(trim($_POST["employmentAddress"][3]));
-$employmentAddress3 = strip_tags(trim($_POST["employmentAddress"][2]));
-$employmentAddress4 = strip_tags(trim($_POST["employmentAddress"][4]));
-$employmentAddress5 = strip_tags(trim($_POST["employmentAddress"][5]));
-$employmentAddress6 = strip_tags(trim($_POST["employmentAddress"][6]));
-$employmentAddress7 = strip_tags(trim($_POST["employmentAddress"][7]));
-$employmentAddress8 = strip_tags(trim($_POST["employmentAddress"][8]));
-$employmentAddress9 = strip_tags(trim($_POST["employmentAddress"][9]));
+foreach ($_POST["employmentAddress"] as $key=>$value) {
+	$employmentAddress[$key] = strip_tags(trim($value));
+}
 
-$employmentPhone0 = strip_tags(trim($_POST["employmentPhone"][0]));
-$employmentPhone1 = strip_tags(trim($_POST["employmentPhone"][1]));
-$employmentPhone2 = strip_tags(trim($_POST["employmentPhone"][2]));
-$employmentPhone3 = strip_tags(trim($_POST["employmentPhone"][3]));
-$employmentPhone4 = strip_tags(trim($_POST["employmentPhone"][4]));
-$employmentPhone5 = strip_tags(trim($_POST["employmentPhone"][5]));
-$employmentPhone6 = strip_tags(trim($_POST["employmentPhone"][6]));
-$employmentPhone7 = strip_tags(trim($_POST["employmentPhone"][7]));
-$employmentPhone8 = strip_tags(trim($_POST["employmentPhone"][8]));
-$employmentPhone9 = strip_tags(trim($_POST["employmentPhone"][9]));
+foreach ($_POST["employmentPhone"] as $key=>$value) {
+	$employmentPhone[$key] = strip_tags(trim($value));
+}
 
-$employmentEmail0 = strip_tags(trim($_POST["employmentEmail"][0]));
-$employmentEmail1 = strip_tags(trim($_POST["employmentEmail"][1]));
-$employmentEmail2 = strip_tags(trim($_POST["employmentEmail"][2]));
-$employmentEmail3 = strip_tags(trim($_POST["employmentEmail"][3]));
-$employmentEmail4 = strip_tags(trim($_POST["employmentEmail"][4]));
-$employmentEmail5 = strip_tags(trim($_POST["employmentEmail"][5]));
-$employmentEmail6 = strip_tags(trim($_POST["employmentEmail"][6]));
-$employmentEmail7 = strip_tags(trim($_POST["employmentEmail"][7]));
-$employmentEmail8 = strip_tags(trim($_POST["employmentEmail"][8]));
-$employmentEmail9 = strip_tags(trim($_POST["employmentEmail"][9]));
+foreach ($_POST["employmentEmail"] as $key=>$value) {
+	$employmentEmail[$key] = strip_tags(trim($value));
+}
 
-$employmentTitle0 = strip_tags(trim($_POST["employmentTitle"][0]));
-$employmentTitle1 = strip_tags(trim($_POST["employmentTitle"][1]));
-$employmentTitle2 = strip_tags(trim($_POST["employmentTitle"][2]));
-$employmentTitle3 = strip_tags(trim($_POST["employmentTitle"][3]));
-$employmentTitle4 = strip_tags(trim($_POST["employmentTitle"][4]));
-$employmentTitle5 = strip_tags(trim($_POST["employmentTitle"][5]));
-$employmentTitle6 = strip_tags(trim($_POST["employmentTitle"][6]));
-$employmentTitle7 = strip_tags(trim($_POST["employmentTitle"][7]));
-$employmentTitle8 = strip_tags(trim($_POST["employmentTitle"][8]));
-$employmentTitle9 = strip_tags(trim($_POST["employmentTitle"][9]));
+foreach ($_POST["employmentTitle"] as $key=>$value) {
+	$employmentTitle[$key] = strip_tags(trim($value));
+}
 
-$employmentSupervisor0 = strip_tags(trim($_POST["employmentSupervisor"][0]));
-$employmentSupervisor1 = strip_tags(trim($_POST["employmentSupervisor"][1]));
-$employmentSupervisor2 = strip_tags(trim($_POST["employmentSupervisor"][2]));
-$employmentSupervisor3 = strip_tags(trim($_POST["employmentSupervisor"][3]));
-$employmentSupervisor4 = strip_tags(trim($_POST["employmentSupervisor"][4]));
-$employmentSupervisor5 = strip_tags(trim($_POST["employmentSupervisor"][5]));
-$employmentSupervisor6 = strip_tags(trim($_POST["employmentSupervisor"][6]));
-$employmentSupervisor7 = strip_tags(trim($_POST["employmentSupervisor"][7]));
-$employmentSupervisor8 = strip_tags(trim($_POST["employmentSupervisor"][8]));
-$employmentSupervisor9 = strip_tags(trim($_POST["employmentSupervisor"][9]));
+foreach ($_POST["employmentSupervisor"] as $key=>$value) {
+	$employmentSupervisor[$key] = strip_tags(trim($value));
+}
 
+foreach ($_POST["employmentRespons"] as $key=>$value) {
+	$employmentRespons[$key] = strip_tags(trim($value));
+}
 
-$employmentRespons0 = strip_tags(trim($_POST["employmentRespons"][0]));
-$employmentRespons1 = strip_tags(trim($_POST["employmentRespons"][1]));
-$employmentRespons2 = strip_tags(trim($_POST["employmentRespons"][2]));
-$employmentRespons3 = strip_tags(trim($_POST["employmentRespons"][3]));
-$employmentRespons4 = strip_tags(trim($_POST["employmentRespons"][4]));
-$employmentRespons5 = strip_tags(trim($_POST["employmentRespons"][5]));
-$employmentRespons6 = strip_tags(trim($_POST["employmentRespons"][6]));
-$employmentRespons7 = strip_tags(trim($_POST["employmentRespons"][7]));
-$employmentRespons8 = strip_tags(trim($_POST["employmentRespons"][8]));
-$employmentRespons9 = strip_tags(trim($_POST["employmentRespons"][9]));
+foreach ($_POST["employmentDateFrom"] as $key=>$value) {
+	$employmentDateFrom[$key] = strip_tags(trim($value));
+}
 
-$employmentDateFrom0 = strip_tags(trim($_POST["employmentDateFrom"][0]));
-$employmentDateFrom1 = strip_tags(trim($_POST["employmentDateFrom"][1]));
-$employmentDateFrom2 = strip_tags(trim($_POST["employmentDateFrom"][2]));
-$employmentDateFrom3 = strip_tags(trim($_POST["employmentDateFrom"][3]));
-$employmentDateFrom4 = strip_tags(trim($_POST["employmentDateFrom"][4]));
-$employmentDateFrom5 = strip_tags(trim($_POST["employmentDateFrom"][5]));
-$employmentDateFrom6 = strip_tags(trim($_POST["employmentDateFrom"][6]));
-$employmentDateFrom7 = strip_tags(trim($_POST["employmentDateFrom"][7]));
-$employmentDateFrom8 = strip_tags(trim($_POST["employmentDateFrom"][8]));
-$employmentDateFrom9 = strip_tags(trim($_POST["employmentDateFrom"][9]));
+foreach ($_POST["employmentDateTo"] as $key=>$value) {
+	$employmentDateTo[$key] = strip_tags(trim($value));
+}
 
-$employmentDateTo0 = strip_tags(trim($_POST["employmentDateTo"][0]));
-$employmentDateTo1 = strip_tags(trim($_POST["employmentDateTo"][1]));
-$employmentDateTo2 = strip_tags(trim($_POST["employmentDateTo"][2]));
-$employmentDateTo3 = strip_tags(trim($_POST["employmentDateTo"][3]));
-$employmentDateTo4 = strip_tags(trim($_POST["employmentDateTo"][4]));
-$employmentDateTo5 = strip_tags(trim($_POST["employmentDateTo"][5]));
-$employmentDateTo6 = strip_tags(trim($_POST["employmentDateTo"][6]));
-$employmentDateTo7 = strip_tags(trim($_POST["employmentDateTo"][7]));
-$employmentDateTo8 = strip_tags(trim($_POST["employmentDateTo"][8]));
-$employmentDateTo9 = strip_tags(trim($_POST["employmentDateTo"][9]));
-
-$employmentReason0 = strip_tags(trim($_POST["employmentReason"][0]));
-$employmentReason1 = strip_tags(trim($_POST["employmentReason"][1]));
-$employmentReason2 = strip_tags(trim($_POST["employmentReason"][2]));
-$employmentReason3 = strip_tags(trim($_POST["employmentReason"][3]));
-$employmentReason4 = strip_tags(trim($_POST["employmentReason"][4]));
-$employmentReason5 = strip_tags(trim($_POST["employmentReason"][5]));
-$employmentReason6 = strip_tags(trim($_POST["employmentReason"][6]));
-$employmentReason7 = strip_tags(trim($_POST["employmentReason"][7]));
-$employmentReason8 = strip_tags(trim($_POST["employmentReason"][8]));
-$employmentReason9 = strip_tags(trim($_POST["employmentReason"][9]));
+foreach ($_POST["employmentReason"] as $key=>$value) {
+	$employmentReason[$key] = strip_tags(trim($value));
+}
 
 
 //References
