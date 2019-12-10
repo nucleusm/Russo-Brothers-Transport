@@ -1,15 +1,5 @@
-<!-- <?php//  error_reporting(-1); ?>
-<?php//  ini_set('display_errors', true); ?> -->
-
 <?php 
 	
-
-
-
-
-
-
-
 	if (!isset($_SESSION)) session_start(); 
 	if(!$_POST) exit;
 	
@@ -40,7 +30,358 @@
 */
 
 
-include ('form-vars.php')
+
+$idName = strip_tags(trim($_POST['idName']));
+$idDob = strip_tags(trim($_POST['idDob']));
+$idSs = strip_tags(trim($_POST['idSs']));
+$idAddress = strip_tags(trim($_POST['idAddress']));
+$idCity = strip_tags(trim($_POST['idCity']));
+$idState = strip_tags(trim($_POST['idState']));
+$idZip = strip_tags(trim($_POST['idZip']));
+$idPhone = strip_tags(trim($_POST['idPhone']));
+$idEmail = strip_tags(trim($_POST['idEmail']));
+$idPhysical = strip_tags(trim($_POST['idPhysical']));
+$idRusso = strip_tags(trim($_POST['idRusso']));
+$idWorkedFrom = strip_tags(trim($_POST['idWorkedFrom']));
+$idWorkedTo = strip_tags(trim($_POST['idWorkedTo']));
+$idWorkedReason = strip_tags(trim($_POST['idWorkedReason']));
+
+
+//Previous Addresses
+foreach ($_POST["prevAddress"] as $key=>$value) {
+    $prevAddress[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["prevCity"] as $key=>$value) {
+    $prevCity[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["prevState"] as $key=>$value) {
+    $prevState[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["prevZip"] as $key=>$value) {
+    $prevZip[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["prevDate"] as $key=>$value) {
+    $prevDate[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["prevFatalities"] as $key=>$value) {
+    $prevFatalities[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["prevInjuries"] as $key=>$value) {
+    $prevInjuries[$key] = strip_tags(trim($value));
+}
+
+
+foreach ($_POST["drCdl"] as $key=>$value) {
+    $drCdl[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["drState"] as $key=>$value) {
+    $drState[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["drDate"] as $key=>$value) {
+    $drDate[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["drClass"] as $key=>$value) {
+    $drClass[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["drEndorsement"] as $key=>$value) {
+    $drEndorsement[$key] = strip_tags(trim($value));
+}
+
+// DRIVING EXPERIENCE 1
+
+// Expirience Truck
+$expTruckFrom = strip_tags(trim($_POST["expTruckFrom"]));
+$expTruckTo = strip_tags(trim($_POST["expTruckTo"]));
+$expTruckMiles = strip_tags(trim($_POST["expTruckMiles"]));
+
+// Expirience Tractor
+$expTractorFrom = strip_tags(trim($_POST["expTractorFrom"]));
+$expTractorTo = strip_tags(trim($_POST["expTractorTo"]));
+$expTractorMiles = strip_tags(trim($_POST["expTractorMiles"]));
+
+
+// Expirience Trailer
+$expTrailerFrom = strip_tags(trim($_POST["expTrailerFrom"]));
+$expTrailerTo = strip_tags(trim($_POST["expTrailerTo"]));
+$expTrailerMiles = strip_tags(trim($_POST["expTrailerMiles"]));
+
+// Expirience Other
+$expOtherFrom = strip_tags(trim($_POST["expOtherFrom"]));
+$expOtherTo = strip_tags(trim($_POST["expOtherTo"]));
+$expOtherMiles = strip_tags(trim($_POST["expOtherMiles"]));
+
+// DRIVING EXPERIENCE 2
+$alabama = strip_tags(trim($_POST["alabama"]));
+$alaska = strip_tags(trim($_POST["alaska"]));
+$arizona = strip_tags(trim($_POST["arizona"]));
+$arkansas = strip_tags(trim($_POST["arkansas"]));
+$california = strip_tags(trim($_POST["california"]));
+$colorado = strip_tags(trim($_POST["colorado"]));
+$connecticut = strip_tags(trim($_POST["connecticut"]));
+$delaware = strip_tags(trim($_POST["delaware"]));
+$florida = strip_tags(trim($_POST["florida"]));
+$georgia = strip_tags(trim($_POST["georgia"]));
+$hawaii = strip_tags(trim($_POST["hawaii"]));
+$idaho = strip_tags(trim($_POST["idaho"]));
+$illinois = strip_tags(trim($_POST["illinois"]));
+$indiana = strip_tags(trim($_POST["indiana"]));
+$iowa = strip_tags(trim($_POST["iowa"]));
+$kansas = strip_tags(trim($_POST["kansas"]));
+$kentucky = strip_tags(trim($_POST["kentucky"]));
+$louisiana = strip_tags(trim($_POST["louisiana"]));
+$maine = strip_tags(trim($_POST["maine"]));
+$maryland = strip_tags(trim($_POST["maryland"]));
+$massachusetts = strip_tags(trim($_POST["massachusetts"]));
+$michigan = strip_tags(trim($_POST["michigan"]));
+$minnesota = strip_tags(trim($_POST["minnesota"]));
+$mississippi = strip_tags(trim($_POST["mississippi"]));
+$missouri = strip_tags(trim($_POST["missouri"]));
+$montana = strip_tags(trim($_POST["montana"]));
+$nebraska = strip_tags(trim($_POST["nebraska"]));
+$nevada = strip_tags(trim($_POST["nevada"]));
+$newhampshire = strip_tags(trim($_POST["newhampshire"]));
+$newjersey = strip_tags(trim($_POST["newjersey"]));
+$newmexico = strip_tags(trim($_POST["newmexico"]));
+$newyork = strip_tags(trim($_POST["newyork"]));
+$northcarolina = strip_tags(trim($_POST["northcarolina"]));
+$northdakota = strip_tags(trim($_POST["northdakota"]));
+$ohio = strip_tags(trim($_POST["ohio"]));
+$oklahoma = strip_tags(trim($_POST["oklahoma"]));
+$oregon = strip_tags(trim($_POST["oregon"]));
+$pennsylvania = strip_tags(trim($_POST["pennsylvania"]));
+$rhodeisland = strip_tags(trim($_POST["rhodeisland"]));
+$southcarolina = strip_tags(trim($_POST["southcarolina"]));
+$southdakota = strip_tags(trim($_POST["southdakota"]));
+$tennessee = strip_tags(trim($_POST["tennessee"]));
+$texas = strip_tags(trim($_POST["texas"]));
+$utah = strip_tags(trim($_POST["utah"]));
+$vermont = strip_tags(trim($_POST["vermont"]));
+$virginia = strip_tags(trim($_POST["virginia"]));
+$washington = strip_tags(trim($_POST["washington"]));
+$westvirginia = strip_tags(trim($_POST["westvirginia"]));
+$wisconsin = strip_tags(trim($_POST["wisconsin"]));
+$wyoming = strip_tags(trim($_POST["wyoming"]));
+
+$expDrivingCourses = strip_tags(trim($_POST["expDrivingCourses"]));
+$expSafeDriving = strip_tags(trim($_POST["expSafeDriving"]));
+
+// Accident Record
+
+
+// function assignVar(post,var){
+//  foreach (post as $key=>$value) {
+//      ${var}[$key] = strip_tags(trim($value));
+//  }
+// }
+
+// assignVar($_POST["accidentNature"],"accidentNature")
+// assignVar($_POST["accidentLocation"],"accidentLocation")
+// assignVar($_POST["accidentDate"],"accidentDate")
+// assignVar($_POST["accidentFatalities"],"accidentFatalities")
+// assignVar($_POST["accidentInjuries"],"accidentInjuries")
+
+
+
+foreach ($_POST["accidentNature"] as $key=>$value) {
+    $accidentNature[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["accidentLocation"] as $key=>$value) {
+    $accidentLocation[$key] = strip_tags(trim($value));
+}
+foreach ($_POST["accidentDate"] as $key=>$value) {
+    $accidentDate[$key] = strip_tags(trim($value));
+}
+
+
+
+for($i=0; $i<10; $i++) {
+	$accidentFatalitiesSample = 'accidentFatalities'.$i;
+	$$accidentFatalitiesSample = strip_tags(trim($_POST["{$accidentFatalitiesSample}"]));
+}
+for($i=0; $i<10; $i++) {
+	$accidentInjuriesSample = 'accidentInjuries'.$i;
+	$$accidentInjuriesSample = strip_tags(trim($_POST["{$accidentInjuriesSample}"]));
+}
+
+
+// Record of Violations
+
+foreach ($_POST["violationOffense"] as $key=>$value) {
+    $violationOffense[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["violationLocation"] as $key=>$value) {
+    $violationLocation[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["violationDate"] as $key=>$value) {
+    $violationDate[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["violationPenalty"] as $key=>$value) {
+    $violationPenalty[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["violationOperated"] as $key=>$value) {
+    $violationOperated[$key] = strip_tags(trim($value));
+}
+
+// DRS Section
+
+$drsDenied = strip_tags(trim($_POST["drsDenied"]));
+$drsDeniedDetail = strip_tags(trim($_POST["drsDeniedDetail"]));
+
+$drsSuspended = strip_tags(trim($_POST["drsSuspended"]));
+$drsSuspendedDetail = strip_tags(trim($_POST["drsSuspendedDetail"]));
+
+$drsUnable = strip_tags(trim($_POST["drsUnable"]));
+$drsUnableDetail = strip_tags(trim($_POST["drsUnableDetail"]));
+
+$drsMedication = strip_tags(trim($_POST["drsMedication"]));
+$drsMedicationDetail = strip_tags(trim($_POST["drsMedicationDetail"]));
+
+
+
+// 8. PREVIOUS RESULTS FOR CONTROLLED SUBSTANCES TESTS
+
+$csVerified = strip_tags(trim($_POST["csVerified"]));
+$csAlcohol = strip_tags(trim($_POST["csAlcohol"]));
+$csRefused = strip_tags(trim($_POST["csRefused"]));
+$csName = strip_tags(trim($_POST["csName"]));
+$csAddress = strip_tags(trim($_POST["csAddress"]));
+$csPhone = strip_tags(trim($_POST["csPhone"]));
+$csDate = strip_tags(trim($_POST["csDate"]));
+
+// 9. PREVIOUS CONTACTS WITH MOTOR CARRIERS
+
+foreach ($_POST["carrierName"] as $key=>$value) {
+    $carrierName[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["carrierAddress"] as $key=>$value) {
+    $carrierAddress[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["carrierPhone"] as $key=>$value) {
+    $carrierPhone[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["carrierFax"] as $key=>$value) {
+    $carrierFax[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["carrierDateFrom"] as $key=>$value) {
+    $carrierDateFrom[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["carrierDateTo"] as $key=>$value) {
+    $carrierDateTo[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["carrierReason"] as $key=>$value) {
+    $carrierReason[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["carrierSubject"] as $key=>$value) {
+    $carrierSubject[$key] = strip_tags(trim($value));
+}
+
+for($i=0; $i<10; $i++) {
+	$carrierSubjectSample = 'carrierSubject'.$i;
+	$$carrierSubjectSample = strip_tags(trim($_POST["{$carrierSubjectSample}"]));
+}
+
+for($i=0; $i<10; $i++) {
+	$carrierDesignatedSample = 'carrierDesignated'.$i;
+	$$carrierDesignatedSample = strip_tags(trim($_POST["{$carrierDesignatedSample}"]));
+}
+
+//References
+
+$referencesName0 = strip_tags(trim($_POST["referencesName0"]));
+$referencesName1 = strip_tags(trim($_POST["referencesName1"]));
+$referencesName2 = strip_tags(trim($_POST["referencesName2"]));
+$referencesPhone0 = strip_tags(trim($_POST["referencesPhone0"]));
+$referencesPhone1 = strip_tags(trim($_POST["referencesPhone1"]));
+$referencesPhone2 = strip_tags(trim($_POST["referencesPhone2"]));
+$referencesAddress0 = strip_tags(trim($_POST["referencesAddress0"]));
+$referencesAddress1 = strip_tags(trim($_POST["referencesAddress1"]));
+$referencesAddress2 = strip_tags(trim($_POST["referencesAddress2"]));
+
+// Certification
+$certificationName = strip_tags(trim($_POST["certificationName"]));
+$certificationDate = strip_tags(trim($_POST["certificationDate"]));
+
+// RECORD OF VIOLTIONS 49 CFR § 391.27
+foreach ($_POST["rovDate"] as $key=>$value) {
+    $rovDate[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["rovOffence"] as $key=>$value) {
+    $rovOffence[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["rovLocation"] as $key=>$value) {
+    $rovLocation[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["rovVehicle"] as $key=>$value) {
+    $rovVehicle[$key] = strip_tags(trim($value));
+}
+
+$rovCertification = strip_tags(trim($_POST["rovCertification"]));
+$rovFullname = strip_tags(trim($_POST["rovFullname"]));
+$rovAction = strip_tags(trim($_POST["rovAction"]));
+
+// AUTHORIZATION TO RELEASE DRUG AND ALCOHOL TESTING INFORMATION
+
+foreach ($_POST["authCompany"] as $key=>$value) {
+    $authCompany[$key] = strip_tags(trim($value));
+}
+
+foreach ($_POST["authContact"] as $key=>$value) {
+    $authContact[$key] = strip_tags(trim($value));
+}
+foreach ($_POST["authPhone"] as $key=>$value) {
+    $authPhone[$key] = strip_tags(trim($value));
+}
+foreach ($_POST["authFax"] as $key=>$value) {
+    $authFax[$key] = strip_tags(trim($value));
+}
+foreach ($_POST["authAddress"] as $key=>$value) {
+    $authAddress[$key] = strip_tags(trim($value));
+}
+foreach ($_POST["authCity"] as $key=>$value) {
+    $authCity[$key] = strip_tags(trim($value));
+}
+foreach ($_POST["authState"] as $key=>$value) {
+    $authState[$key] = strip_tags(trim($value));
+}
+foreach ($_POST["authZip"] as $key=>$value) {
+    $authZip[$key] = strip_tags(trim($value));
+}
+
+$authName = strip_tags(trim($_POST["authName"]));
+$authSs = strip_tags(trim($_POST["authSs"]));
+$authDate = strip_tags(trim($_POST["authDate"]));
+
+$ackDate = strip_tags(trim($_POST["ackDate"]));
+$ackName = strip_tags(trim($_POST["ackName"]));
+
+$dapolicyDate = strip_tags(trim($_POST["dapolicyDate"]));
+$dapolicyName = strip_tags(trim($_POST["dapolicyName"]));
+
 
 
 require('../../../fpdf/fpdf.php');
@@ -147,56 +488,15 @@ require('../../../fpdf/fpdf.php');
 			$pdf->Ln(5);
 			$pdf->SetFont('Times','',9);
 			$pdf->SetFillColor(247,247,247);
-			$pdf->Cell(70,5, $prevAddress[0],0,'L',0,true);
-			$pdf->Cell(40,5, $prevCity[0],0,'L',0,true);
-			$pdf->Cell(40,5, $prevState[0],0,'L',0,true);
-			$pdf->Cell(30,5, $prevZip[0],0,'L',0,true);
-			$pdf->Ln(5);
-			
-			$pdf->Cell(70,5, $prevAddress[1],0,'L',0);
-			$pdf->Cell(40,5, $prevCity[1],0,'L',0);
-			$pdf->Cell(40,5, $prevState[1],0,'L',0);
-			$pdf->Cell(30,5, $prevZip[1],0,'L',0);
-			$pdf->Ln(5);
-			$pdf->Cell(70,5, $prevAddress[2],0,'L',0,true);
-			$pdf->Cell(40,5, $prevCity[2],0,'L',0,true);
-			$pdf->Cell(40,5, $prevState[2],0,'L',0,true);
-			$pdf->Cell(30,5, $prevZip[2],0,'L',0,true);
-			$pdf->Ln(5);
-			$pdf->Cell(70,5, $prevAddress[3],0,'L',0);
-			$pdf->Cell(40,5, $prevCity[3],0,'L',0);
-			$pdf->Cell(40,5, $prevState[3],0,'L',0);
-			$pdf->Cell(30,5, $prevZip[3],0,'L',0);
-			$pdf->Ln(5);
-			$pdf->Cell(70,5, $prevAddress[4],0,'L',0,true);
-			$pdf->Cell(40,5, $prevCity[4],0,'L',0,true);
-			$pdf->Cell(40,5, $prevState[4],0,'L',0,true);
-			$pdf->Cell(30,5, $prevZip[4],0,'L',0,true);
-			$pdf->Ln(5);
-			$pdf->Cell(70,5, $prevAddress[5],0,'L',0);
-			$pdf->Cell(40,5, $prevCity[5],0,'L',0);
-			$pdf->Cell(40,5, $prevState[5],0,'L',0);
-			$pdf->Cell(30,5, $prevZip[5],0,'L',0);
-			$pdf->Ln(5);
-			$pdf->Cell(70,5, $prevAddress[6],0,'L',0,true);
-			$pdf->Cell(40,5, $prevCity[6],0,'L',0,true);
-			$pdf->Cell(40,5, $prevState[6],0,'L',0,true);
-			$pdf->Cell(30,5, $prevZip[6],0,'L',0,true);
-			$pdf->Ln(5);
-			$pdf->Cell(70,5, $prevAddress[7],0,'L',0);
-			$pdf->Cell(40,5, $prevCity[7],0,'L',0);
-			$pdf->Cell(40,5, $prevState[7],0,'L',0);
-			$pdf->Cell(30,5, $prevZip[7],0,'L',0);
-			$pdf->Ln(5);
-			$pdf->Cell(70,5, $prevAddress[8],0,'L',0,true);
-			$pdf->Cell(40,5, $prevCity[8],0,'L',0,true);
-			$pdf->Cell(40,5, $prevState[8],0,'L',0,true);
-			$pdf->Cell(30,5, $prevZip[8],0,'L',0,true);
-			$pdf->Ln(5);
-			$pdf->Cell(70,5, $prevAddress[9],0,'L',0);
-			$pdf->Cell(40,5, $prevCity[9],0,'L',0);
-			$pdf->Cell(40,5, $prevState[9],0,'L',0);
-			$pdf->Cell(30,5, $prevZip[9],0,'L',0);
+
+			for($i=0; $i<10; $i++) {
+				$pdf->Cell(70,5, $prevAddress[$i],0,'L',0,true);
+				$pdf->Cell(40,5, $prevCity[$i],0,'L',0,true);
+				$pdf->Cell(40,5, $prevState[$i],0,'L',0,true);
+				$pdf->Cell(30,5, $prevZip[$i],0,'L',0,true);
+				$pdf->Ln(5);
+			}
+
 
 			$pdf->Ln(8);
 			$pdf->SetFont('Times','B',9);
@@ -213,72 +513,15 @@ require('../../../fpdf/fpdf.php');
 			$pdf->Cell(55,5,'Endorsements',0,'L',0);
 			$pdf->Ln(5);
 			$pdf->SetFont('Times','',9);
-			$pdf->Cell(50,5, $drCdl[0],0,'L',0,true);
-			$pdf->Cell(30,5, $drState[0],0,'L',0,true);
-			$pdf->Cell(30,5, $drDate[0],0,'L',0,true);
-			$pdf->Cell(15,5, $drClass[0],0,'L',0,true);
-			$pdf->Cell(55,5, $drEndorsement[0],0,'L',0,true);
-			$pdf->Ln(5);
-			
-			$pdf->Cell(50,5, $drCdl[1],0,'L',0);
-			$pdf->Cell(30,5, $drState[1],0,'L',0);
-			$pdf->Cell(30,5, $drDate[1],0,'L',0);
-			$pdf->Cell(15,5, $drClass[1],0,'L',0);
-			$pdf->Cell(55,5, $drEndorsement[1],0,'L',0);
-			$pdf->Ln(5);
 
-			$pdf->Cell(50,5, $drCdl[2],0,'L',0,true);
-			$pdf->Cell(30,5, $drState[2],0,'L',0,true);
-			$pdf->Cell(30,5, $drDate[2],0,'L',0,true);
-			$pdf->Cell(15,5, $drClass[2],0,'L',0,true);
-			$pdf->Cell(55,5, $drEndorsement[2],0,'L',0,true);
-			$pdf->Ln(5);
-			
-			$pdf->Cell(50,5, $drCdl[3],0,'L',0);
-			$pdf->Cell(30,5, $drState[3],0,'L',0);
-			$pdf->Cell(30,5, $drDate[3],0,'L',0);
-			$pdf->Cell(15,5, $drClass[3],0,'L',0);
-			$pdf->Cell(55,5, $drEndorsement[3],0,'L',0);
-			$pdf->Ln(5);
-			$pdf->Cell(50,5, $drCdl[4],0,'L',0,true);
-			$pdf->Cell(30,5, $drState[4],0,'L',0,true);
-			$pdf->Cell(30,5, $drDate[4],0,'L',0,true);
-			$pdf->Cell(15,5, $drClass[4],0,'L',0,true);
-			$pdf->Cell(55,5, $drEndorsement[4],0,'L',0,true);
-			$pdf->Ln(5);
-			
-			$pdf->Cell(50,5, $drCdl[5],0,'L',0);
-			$pdf->Cell(30,5, $drState[5],0,'L',0);
-			$pdf->Cell(30,5, $drDate[5],0,'L',0);
-			$pdf->Cell(15,5, $drClass[5],0,'L',0);
-			$pdf->Cell(55,5, $drEndorsement[5],0,'L',0);
-			$pdf->Ln(5);
-			$pdf->Cell(50,5, $drCdl[6],0,'L',0,true);
-			$pdf->Cell(30,5, $drState[6],0,'L',0,true);
-			$pdf->Cell(30,5, $drDate[6],0,'L',0,true);
-			$pdf->Cell(15,5, $drClass[6],0,'L',0,true);
-			$pdf->Cell(55,5, $drEndorsement[6],0,'L',0,true);
-			$pdf->Ln(5);
-			
-			$pdf->Cell(50,5, $drCdl[7],0,'L',0);
-			$pdf->Cell(30,5, $drState[7],0,'L',0);
-			$pdf->Cell(30,5, $drDate[7],0,'L',0);
-			$pdf->Cell(15,5, $drClass[7],0,'L',0);
-			$pdf->Cell(55,5, $drEndorsement[7],0,'L',0);
-			$pdf->Ln(5);
-			$pdf->Cell(50,5, $drCdl[8],0,'L',0,true);
-			$pdf->Cell(30,5, $drState[8],0,'L',0,true);
-			$pdf->Cell(30,5, $drDate[8],0,'L',0,true);
-			$pdf->Cell(15,5, $drClass[8],0,'L',0,true);
-			$pdf->Cell(55,5, $drEndorsement[8],0,'L',0,true);
-			$pdf->Ln(5);
-			
-			$pdf->Cell(50,5, $drCdl[9],0,'L',0);
-			$pdf->Cell(30,5, $drState[9],0,'L',0);
-			$pdf->Cell(30,5, $drDate[9],0,'L',0);
-			$pdf->Cell(15,5, $drClass[9],0,'L',0);
-			$pdf->Cell(55,5, $drEndorsement[9],0,'L',0);
-			
+			for($i=0; $i<10; $i++) {
+				$pdf->Cell(50,5, $drCdl[$i],0,'L',0,true);
+				$pdf->Cell(30,5, $drState[$i],0,'L',0,true);
+				$pdf->Cell(30,5, $drDate[$i],0,'L',0,true);
+				$pdf->Cell(15,5, $drClass[$i],0,'L',0,true);
+				$pdf->Cell(55,5, $drEndorsement[$i],0,'L',0,true);
+				$pdf->Ln(5);
+			}
 			$pdf->AddPage();
 
 			$pdf->SetFont('Times','B',9);
@@ -738,75 +981,16 @@ require('../../../fpdf/fpdf.php');
 			$pdf->Ln(5);
 
 			$pdf->SetFont('Times','',9);
-			$pdf->Cell(60,5, $accidentNature[0],0,'L',0);
-			$pdf->Cell(60,5, $accidentLocation[0],0,'L',0);
-			$pdf->Cell(20,5, $accidentDate[0],0,'L',0);
-			$pdf->Cell(20,5, $accidentFatalities0,0,'L',0);
-			$pdf->Cell(20,5, $accidentInjuries0,0,'L',0);
-
-			$pdf->Cell(60,5, $accidentNature[1],1,'L',0,true);
-			$pdf->Cell(60,5, $accidentLocation[1],1,'L',0,true);
-			$pdf->Cell(20,5, $accidentDate[1],1,'L',0,true);
-			$pdf->Cell(20,5, $accidentFatalities1,1,'L',0,true);
-			$pdf->Cell(20,5, $accidentInjuries1,1,'L',0,true);
-			$pdf->Ln(5);
-
-			$pdf->Cell(60,5, $accidentNature[2],0,'L',0);
-			$pdf->Cell(60,5, $accidentLocation[2],0,'L',0);
-			$pdf->Cell(20,5, $accidentDate[2],0,'L',0);
-			$pdf->Cell(20,5, $accidentFatalities2,0,'L',0);
-			$pdf->Cell(20,5, $accidentInjuries2,0,'L',0);
-			$pdf->Ln(5);
-
-			$pdf->Cell(60,5, $accidentNature[3],0,'L',0,true);
-			$pdf->Cell(60,5, $accidentLocation[3],0,'L',0,true);
-			$pdf->Cell(20,5, $accidentDate[3],0,'L',0,true);
-			$pdf->Cell(20,5, $accidentFatalities3,0,'L',0,true);
-			$pdf->Cell(20,5, $accidentInjuries3,0,'L',0,true);
-			$pdf->Ln(5);
-
-			$pdf->Cell(60,5, $accidentNature[4],0,'L',0);
-			$pdf->Cell(60,5, $accidentLocation[4],0,'L',0);
-			$pdf->Cell(20,5, $accidentDate[4],0,'L',0);
-			$pdf->Cell(20,5, $accidentFatalities4,0,'L',0);
-			$pdf->Cell(20,5, $accidentInjuries4,0,'L',0);
-			$pdf->Ln(5);
-
-			$pdf->Cell(60,5, $accidentNature[5],0,'L',0,true);
-			$pdf->Cell(60,5, $accidentLocation[5],0,'L',0,true);
-			$pdf->Cell(20,5, $accidentDate[5],0,'L',0,true);
-			$pdf->Cell(20,5, $accidentFatalities5,0,'L',0,true);
-			$pdf->Cell(20,5, $accidentInjuries5,0,'L',0,true);
-			$pdf->Ln(5);
-
-			$pdf->Cell(60,5, $accidentNature[6],0,'L',0);
-			$pdf->Cell(60,5, $accidentLocation[6],0,'L',0);
-			$pdf->Cell(20,5, $accidentDate[6],0,'L',0);
-			$pdf->Cell(20,5, $accidentFatalities6,0,'L',0);
-			$pdf->Cell(20,5, $accidentInjuries6,0,'L',0);
-			$pdf->Ln(5);
-
-			$pdf->Cell(60,5, $accidentNature[7],0,'L',0,true);
-			$pdf->Cell(60,5, $accidentLocation[7],0,'L',0,true);
-			$pdf->Cell(20,5, $accidentDate[7],0,'L',0,true);
-			$pdf->Cell(20,5, $accidentFatalities7,0,'L',0,true);
-			$pdf->Cell(20,5, $accidentInjuries7,0,'L',0,true);
-			$pdf->Ln(5);
-
-			$pdf->Cell(60,5, $accidentNature[8],0,'L',0);
-			$pdf->Cell(60,5, $accidentLocation[8],0,'L',0);
-			$pdf->Cell(20,5, $accidentDate[8],0,'L',0);
-			$pdf->Cell(20,5, $accidentFatalities8,0,'L',0);
-			$pdf->Cell(20,5, $accidentInjuries8,0,'L',0);
-			$pdf->Ln(5);
-
-			$pdf->Cell(60,5, $accidentNature[9],0,'L',0,true);
-			$pdf->Cell(60,5, $accidentLocation[9],0,'L',0,true);
-			$pdf->Cell(20,5, $accidentDate[9],0,'L',0,true);
-			$pdf->Cell(20,5, $accidentFatalities9,0,'L',0,true);
-			$pdf->Cell(20,5, $accidentInjuries9,0,'L',0,true);
-
-
+			for($i=0; $i<10; $i++) {
+				$pdf->Cell(60,5, $accidentNature[$i],0,'L',0);
+				$pdf->Cell(60,5, $accidentLocation[$i],0,'L',0);
+				$pdf->Cell(20,5, $accidentDate[$i],0,'L',0);
+				$accidentFatalitiesSample = 'accidentFatalities'.$i;
+				$pdf->Cell(20,5, $$accidentFatalitiesSample,0,'L',0);
+				$accidentInjuriesSample = 'accidentInjuries'.$i;
+				$pdf->Cell(20,5, $$accidentInjuriesSample,0,'L',0);
+				$pdf->Ln(5);
+			}
 
 			$pdf->Ln(8);
 			$pdf->SetFont('Times','B',9);
@@ -822,76 +1006,14 @@ require('../../../fpdf/fpdf.php');
 			$pdf->Cell(30,5,'Penalty',0,'L',0);
 			$pdf->Ln(5);
 			$pdf->SetFont('Times','',9);
-
-			$pdf->Cell(40,5, $violationOffense[0],0,'L',0,true);
-			$pdf->Cell(50,5, $violationLocation[0],0,'L',0,true);
-			$pdf->Cell(30,5, $violationDate[0],0,'L',0,true);
-			$pdf->Cell(30,5, $violationOperated[0],0,'L',0,true);
-			$pdf->Cell(30,5, $violationPenalty[0],0,'L',0,true);
+			for($i=0; $i<10; $i++) {
+			$pdf->Cell(40,5, $violationOffense[$i],0,'L',0,true);
+			$pdf->Cell(50,5, $violationLocation[$i],0,'L',0,true);
+			$pdf->Cell(30,5, $violationDate[$i],0,'L',0,true);
+			$pdf->Cell(30,5, $violationOperated[$i],0,'L',0,true);
+			$pdf->Cell(30,5, $violationPenalty[$i],0,'L',0,true);
 			$pdf->Ln(5);
-			
-			$pdf->Cell(40,5, $violationOffense[1],0,'L',0);
-			$pdf->Cell(50,5, $violationLocation[1],0,'L',0);
-			$pdf->Cell(30,5, $violationDate[1],0,'L',0);
-			$pdf->Cell(30,5, $violationOperated[1],0,'L',0);
-			$pdf->Cell(30,5, $violationPenalty[1],0,'L',0);
-			$pdf->Ln(5);
-
-			$pdf->Cell(40,5, $violationOffense[2],0,'L',0,true);
-			$pdf->Cell(50,5, $violationLocation[2],0,'L',0,true);
-			$pdf->Cell(30,5, $violationDate[2],0,'L',0,true);
-			$pdf->Cell(30,5, $violationOperated[2],0,'L',0,true);
-			$pdf->Cell(30,5, $violationPenalty[2],0,'L',0,true);
-			$pdf->Ln(5);
-			
-			$pdf->Cell(40,5, $violationOffense[3],0,'L',0);
-			$pdf->Cell(50,5, $violationLocation[3],0,'L',0);
-			$pdf->Cell(30,5, $violationDate[3],0,'L',0);
-			$pdf->Cell(30,5, $violationOperated[3],0,'L',0);
-			$pdf->Cell(30,5, $violationPenalty[3],0,'L',0);
-			$pdf->Ln(5);
-			$pdf->Cell(40,5, $violationOffense[4],0,'L',0,true);
-			$pdf->Cell(50,5, $violationLocation[4],0,'L',0,true);
-			$pdf->Cell(30,5, $violationDate[4],0,'L',0,true);
-			$pdf->Cell(30,5, $violationOperated[4],0,'L',0,true);
-			$pdf->Cell(30,5, $violationPenalty[4],0,'L',0,true);
-			$pdf->Ln(5);
-			
-			$pdf->Cell(40,5, $violationOffense[5],0,'L',0);
-			$pdf->Cell(50,5, $violationLocation[5],0,'L',0);
-			$pdf->Cell(30,5, $violationDate[5],0,'L',0);
-			$pdf->Cell(30,5, $violationOperated[5],0,'L',0);
-			$pdf->Cell(30,5, $violationPenalty[5],0,'L',0);
-			$pdf->Ln(5);
-
-			$pdf->Cell(40,5, $violationOffense[6],0,'L',0,true);
-			$pdf->Cell(50,5, $violationLocation[6],0,'L',0,true);
-			$pdf->Cell(30,5, $violationDate[6],0,'L',0,true);
-			$pdf->Cell(30,5, $violationOperated[6],0,'L',0,true);
-			$pdf->Cell(30,5, $violationPenalty[6],0,'L',0,true);
-			$pdf->Ln(5);
-			
-			$pdf->Cell(40,5, $violationOffense[7],0,'L',0);
-			$pdf->Cell(50,5, $violationLocation[7],0,'L',0);
-			$pdf->Cell(30,5, $violationDate[7],0,'L',0);
-			$pdf->Cell(30,5, $violationOperated[7],0,'L',0);
-			$pdf->Cell(30,5, $violationPenalty[7],0,'L',0);
-			$pdf->Ln(5);
-			$pdf->Cell(40,5, $violationOffense[8],0,'L',0,true);
-			$pdf->Cell(50,5, $violationLocation[8],0,'L',0,true);
-			$pdf->Cell(30,5, $violationDate[8],0,'L',0,true);
-			$pdf->Cell(30,5, $violationOperated[8],0,'L',0,true);
-			$pdf->Cell(30,5, $violationPenalty[8],0,'L',0,true);
-			$pdf->Ln(5);
-			
-			$pdf->Cell(40,5, $violationOffense[9],0,'L',0);
-			$pdf->Cell(50,5, $violationLocation[9],0,'L',0);
-			$pdf->Cell(30,5, $violationDate[9],0,'L',0);
-			$pdf->Cell(30,5, $violationOperated[9],0,'L',0);
-			$pdf->Cell(30,5, $violationPenalty[9],0,'L',0);
-			$pdf->Ln(5);
-
-
+			}
 			$pdf->Ln(8);
 			$pdf->SetFont('Times','B',9);
 			$pdf->Cell(0,10,"7. DENIAL, REVOCATION OR SUSPENSION OF DRIVER'S LICENSE/PERMIT ");
@@ -991,579 +1113,71 @@ require('../../../fpdf/fpdf.php');
 			$pdf->SetFont('Times','',9);
 			$pdf->MultiCell(0,5,"Give a complete record of all employment for the past three (3) years, including any unemployment or self-employment and all commercial driving experience for the past ten (10) years.");
 
-
-
-
-
+			for($i=0; $i<10; $i++) {
 			$pdf->SetFont('Times','B',10);
-			$pdf->Cell(0,10,'Employer #1',0,0);
-
+			$pdf->Cell(0,10,'Employer '.$i,0,0);
+			
 			$pdf->Ln(8);
 			$pdf->SetFont('Times','I',9);
 			$pdf->Cell(30,5,"Motor Carrier's Name:");
 			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $carrierName[0]);
+			$pdf->Cell(70,5, $carrierName[$i]);
 			$pdf->SetFont('Times','I',9);
 			$pdf->Cell(12,5,'Address:');
 			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierAddress[0]);
+			$pdf->Cell(15,5, $carrierAddress[$i]);
 
 			$pdf->Ln(5);
 			$pdf->SetFont('Times','I',9);
 			$pdf->Cell(10,5,"Phone:");
 			$pdf->SetFont('Times','',9);
-			$pdf->Cell(90,5, $carrierPhone[0]);
+			$pdf->Cell(90,5, $carrierPhone[$i]);
 			$pdf->SetFont('Times','I',9);
 			$pdf->Cell(7,5,'Fax:');
 			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierFax[0]);
-
+			$pdf->Cell(15,5, $carrierFax[$i]);
+			
 			$pdf->Ln(5);
 			$pdf->SetFont('Times','I',9);
 			$pdf->Cell(17,5,"Date From:");
 			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierDateFrom[0]);
+			$pdf->Cell(83,5, $carrierDateFrom[$i]);
 			$pdf->SetFont('Times','I',9);
 			$pdf->Cell(12,5,'Date To:');
 			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierDateTo[0]);
+			$pdf->Cell(15,5, $carrierDateTo[$i]);
 
 			$pdf->Ln(5);
 			$pdf->SetFont('Times','I',9);
 			$pdf->Cell(28,5,"Reason for Leaving:");
 			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierReason[0]);
+			$pdf->Cell(83,5, $carrierReason[$i]);
 
 			$pdf->Ln(8);
-			if($carrierSubject[0] == "Yes")
-			$checkCarrierSubject[0] = "X"; else $checkCarrierSubject[0] = "";
+
+			$carrierSubjectSample = 'carrierSubject'.$i;
+			if($$carrierSubjectSample == "Yes"){
+					$checkCarrierSubjectSample = "X"; 
+				} else {
+					$checkCarrierSubjectSample = "";
+				}
 			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierSubject[0], 'LTRB');
+			$pdf->Cell(4,4,$checkCarrierSubjectSample, 'LTRB');
 			$pdf->SetFont('Times','',9);
 			$pdf->MultiCell(0,4, 'Were you subject to the FMCSRs while employed here?',0,'L',0);
-
 			$pdf->Ln(2);
-			if($carrierDesignated[0] == "Yes")
-			$checkCarrierDesignated[0] = "X"; else $checkCarrierDesignated[0] = "";
+			$carrierDesignatedSample = 'carrierDesignated'.$i;
+			if($$carrierDesignatedSample == "Yes"){
+				$checkcarrierDesignatedSample = "X"; 
+			} else {
+				$checkcarrierDesignatedSample = "";
+			}
 			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierDesignated[1], 'LTRB');
+			$pdf->Cell(4,4,$checkcarrierDesignatedSample, 'LTRB');
 			$pdf->SetFont('Times','',9);
 			$pdf->MultiCell(0,4, 'Was your job designated as a safety-sensitive function in any DOT-Regulated mode subject to the drug and alcohol testing requirement of 49 CFR Part 40?',0,'L',0);
 			$pdf->Ln(1);
-
-			$pdf->SetFont('Times','B',10);
-			$pdf->Cell(0,10,'Employer #2',0,0);
-
-			$pdf->Ln(8);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(30,5,"Motor Carrier's Name:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $carrierName[1]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Address:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierAddress[1]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(10,5,"Phone:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(90,5, $carrierPhone[1]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(7,5,'Fax:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierFax[1]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Date From:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierDateFrom[1]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Date To:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierDateTo[1]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(28,5,"Reason for Leaving:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierReason[1]);
-
-			$pdf->Ln(8);
-			if($carrierSubject[1] == "Yes")
-			$checkCarrierSubject[1] = "X"; else $checkCarrierSubject[1] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierSubject[1], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Were you subject to the FMCSRs while employed here?',0,'L',0);
-
-			$pdf->Ln(2);
-			if($carrierDesignated[1] == "Yes")
-			$checkCarrierDesignated[1] = "X"; else $checkCarrierDesignated[1] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierDesignated[1], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Was your job designated as a safety-sensitive function in any DOT-Regulated mode subject to the drug and alcohol testing requirement of 49 CFR Part 40?',0,'L',0);
-			$pdf->Ln(1);
-
-
-			$pdf->SetFont('Times','B',10);
-			$pdf->Cell(0,10,'Employer #3',0,0);
-
-			$pdf->Ln(8);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(30,5,"Motor Carrier's Name:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $carrierName[2]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Address:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierAddress[2]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(10,5,"Phone:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(90,5, $carrierPhone[2]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(7,5,'Fax:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierFax[2]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Date From:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierDateFrom[2]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Date To:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierDateTo[2]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(28,5,"Reason for Leaving:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierReason[2]);
-
-			$pdf->Ln(8);
-			if($carrierSubject[2] == "Yes")
-			$checkCarrierSubject[2] = "X"; else $checkCarrierSubject[2] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierSubject[2], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Were you subject to the FMCSRs while employed here?',0,'L',0);
-
-			$pdf->Ln(2);
-			if($carrierDesignated[2] == "Yes")
-			$checkCarrierDesignated[2] = "X"; else $checkCarrierDesignated[2] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierDesignated[2], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Was your job designated as a safety-sensitive function in any DOT-Regulated mode subject to the drug and alcohol testing requirement of 49 CFR Part 40?',0,'L',0);
-			$pdf->Ln(1);
-
-
-
-			$pdf->SetFont('Times','B',10);
-			$pdf->Cell(0,10,'Employer #4',0,0);
-
-			$pdf->Ln(8);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(30,5,"Motor Carrier's Name:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $carrierName[3]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Address:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierAddress[3]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(10,5,"Phone:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(90,5, $carrierPhone[3]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(7,5,'Fax:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierFax[3]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Date From:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierDateFrom[3]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Date To:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierDateTo[3]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(28,5,"Reason for Leaving:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierReason[3]);
-
-			$pdf->Ln(8);
-			if($carrierSubject[3] == "Yes")
-			$checkCarrierSubject[3] = "X"; else $checkCarrierSubject[3] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierSubject[3], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Were you subject to the FMCSRs while employed here?',0,'L',0);
-
-			$pdf->Ln(2);
-			if($carrierDesignated[3] == "Yes")
-			$checkCarrierDesignated[3] = "X"; else $checkCarrierDesignated[3] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierDesignated[3], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Was your job designated as a safety-sensitive function in any DOT-Regulated mode subject to the drug and alcohol testing requirement of 49 CFR Part 40?',0,'L',0);
-			$pdf->Ln(1);
-
-
-			$pdf->SetFont('Times','B',10);
-			$pdf->Cell(0,10,'Employer #5',0,0);
-
-			$pdf->Ln(8);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(30,5,"Motor Carrier's Name:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $carrierName[4]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Address:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierAddress[4]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(10,5,"Phone:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(90,5, $carrierPhone[4]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(7,5,'Fax:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierFax[4]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Date From:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierDateFrom[4]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Date To:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierDateTo[4]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(28,5,"Reason for Leaving:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierReason[4]);
-
-			$pdf->Ln(8);
-			if($carrierSubject[4] == "Yes")
-			$checkCarrierSubject[4] = "X"; else $checkCarrierSubject[4] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierSubject[4], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Were you subject to the FMCSRs while employed here?',0,'L',0);
-
-			$pdf->Ln(2);
-			if($carrierDesignated[4] == "Yes")
-			$checkCarrierDesignated[4] = "X"; else $checkCarrierDesignated[4] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierDesignated[4], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Was your job designated as a safety-sensitive function in any DOT-Regulated mode subject to the drug and alcohol testing requirement of 49 CFR Part 40?',0,'L',0);
-			$pdf->Ln(1);
-
-
-			$pdf->SetFont('Times','B',10);
-			$pdf->Cell(0,10,'Employer #6',0,0);
-
-			$pdf->Ln(8);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(30,5,"Motor Carrier's Name:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $carrierName[5]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Address:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierAddress[5]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(10,5,"Phone:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(90,5, $carrierPhone[5]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(7,5,'Fax:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierFax[5]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Date From:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierDateFrom[5]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Date To:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierDateTo[5]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(28,5,"Reason for Leaving:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierReason[5]);
-
-			$pdf->Ln(8);
-			if($carrierSubject[5] == "Yes")
-			$checkCarrierSubject[5] = "X"; else $checkCarrierSubject[5] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierSubject[5], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Were you subject to the FMCSRs while employed here?',0,'L',0);
-
-			$pdf->Ln(2);
-			if($carrierDesignated[5] == "Yes")
-			$checkCarrierDesignated[5] = "X"; else $checkCarrierDesignated[5] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierDesignated[5], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Was your job designated as a safety-sensitive function in any DOT-Regulated mode subject to the drug and alcohol testing requirement of 49 CFR Part 40?',0,'L',0);
-			$pdf->Ln(1);
-
-
-			$pdf->SetFont('Times','B',10);
-			$pdf->Cell(0,10,'Employer #7',0,0);
-
-			$pdf->Ln(8);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(30,5,"Motor Carrier's Name:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $carrierName[6]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Address:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierAddress[6]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(10,5,"Phone:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(90,5, $carrierPhone[6]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(7,5,'Fax:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierFax[6]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Date From:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierDateFrom[6]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Date To:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierDateTo[6]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(28,5,"Reason for Leaving:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierReason[6]);
-
-			$pdf->Ln(8);
-			if($carrierSubject[6] == "Yes")
-			$checkCarrierSubject[6] = "X"; else $checkCarrierSubject[6] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierSubject[6], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Were you subject to the FMCSRs while employed here?',0,'L',0);
-
-			$pdf->Ln(2);
-			if($carrierDesignated[6] == "Yes")
-			$checkCarrierDesignated[6] = "X"; else $checkCarrierDesignated[6] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierDesignated[6], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Was your job designated as a safety-sensitive function in any DOT-Regulated mode subject to the drug and alcohol testing requirement of 49 CFR Part 40?',0,'L',0);
-			$pdf->Ln(1);
-
-
-			$pdf->SetFont('Times','B',10);
-			$pdf->Cell(0,10,'Employer #8',0,0);
-
-			$pdf->Ln(8);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(30,5,"Motor Carrier's Name:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $carrierName[7]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Address:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierAddress[7]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(10,5,"Phone:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(90,5, $carrierPhone[7]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(7,5,'Fax:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierFax[7]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Date From:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierDateFrom[7]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Date To:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierDateTo[7]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(28,5,"Reason for Leaving:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierReason[7]);
-
-			$pdf->Ln(8);
-			if($carrierSubject[7] == "Yes")
-			$checkCarrierSubject[7] = "X"; else $checkCarrierSubject[7] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierSubject[7], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Were you subject to the FMCSRs while employed here?',0,'L',0);
-
-			$pdf->Ln(2);
-			if($carrierDesignated[7] == "Yes")
-			$checkCarrierDesignated[7] = "X"; else $checkCarrierDesignated[7] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierDesignated[7], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Was your job designated as a safety-sensitive function in any DOT-Regulated mode subject to the drug and alcohol testing requirement of 49 CFR Part 40?',0,'L',0);
-			$pdf->Ln(1);
-
-
-			$pdf->SetFont('Times','B',10);
-			$pdf->Cell(0,10,'Employer #9',0,0);
-
-			$pdf->Ln(8);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(30,5,"Motor Carrier's Name:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $carrierName[8]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Address:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierAddress[8]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(10,5,"Phone:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(90,5, $carrierPhone[8]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(7,5,'Fax:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierFax[8]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Date From:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierDateFrom[8]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Date To:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierDateTo[8]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(28,5,"Reason for Leaving:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierReason[8]);
-
-			$pdf->Ln(8);
-			if($carrierSubject[8] == "Yes")
-			$checkCarrierSubject[8] = "X"; else $checkCarrierSubject[8] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierSubject[8], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Were you subject to the FMCSRs while employed here?',0,'L',0);
-
-			$pdf->Ln(2);
-			if($carrierDesignated[8] == "Yes")
-			$checkCarrierDesignated[8] = "X"; else $checkCarrierDesignated[8] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierDesignated[8], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Was your job designated as a safety-sensitive function in any DOT-Regulated mode subject to the drug and alcohol testing requirement of 49 CFR Part 40?',0,'L',0);
-			$pdf->Ln(1);
-
-
-			$pdf->SetFont('Times','B',10);
-			$pdf->Cell(0,10,'Employer #10',0,0);
-
-			$pdf->Ln(8);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(30,5,"Motor Carrier's Name:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $carrierName[9]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Address:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierAddress[9]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(10,5,"Phone:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(90,5, $carrierPhone[9]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(7,5,'Fax:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierFax[9]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Date From:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierDateFrom[9]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Date To:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $carrierDateTo[9]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(28,5,"Reason for Leaving:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $carrierReason[9]);
-
-			$pdf->Ln(8);
-			if($carrierSubject[9] == "Yes")
-			$checkCarrierSubject[9] = "X"; else $checkCarrierSubject[9] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierSubject[9], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Were you subject to the FMCSRs while employed here?',0,'L',0);
-
-			$pdf->Ln(2);
-			if($carrierDesignated[9] == "Yes")
-			$checkCarrierDesignated[9] = "X"; else $checkCarrierDesignated[9] = "";
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(4,4,$checkCarrierDesignated[9], 'LTRB');
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(0,4, 'Was your job designated as a safety-sensitive function in any DOT-Regulated mode subject to the drug and alcohol testing requirement of 49 CFR Part 40?',0,'L',0);
-			$pdf->Ln(1);
-
+			}
 
 			
 
@@ -1574,63 +1188,27 @@ require('../../../fpdf/fpdf.php');
 			$pdf->Ln(5);
 			$pdf->SetFont('Times','',10);
 			$pdf->MultiCell(0,10,'List three (3) persons for references, other than family members, who have knowledge of your safety habits. ',0, 'L',0);
-			$pdf->SetFont('Times','B',10);
-			$pdf->Cell(0,10,'Reference #1',0,0);
-			$pdf->Ln(8);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(10,5,"Name:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $referencesName1);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Phone:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $referencesPhone1);
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(13,5,"Address:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $referencesAddress1);
-
-
-			
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','B',10);
-			$pdf->Cell(0,10,'Reference #2',0,0);
-			$pdf->Ln(8);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(10,5,"Name:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $referencesName2);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Phone:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $referencesPhone2);
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(13,5,"Address:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $referencesAddress2);
-
-
-			
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','B',10);
-			$pdf->Cell(0,10,'Reference #3',0,0);
-			$pdf->Ln(8);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(10,5,"Name:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $referencesName3);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(12,5,'Phone:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $referencesPhone3);
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(13,5,"Address:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(83,5, $referencesAddress3);
-			$pdf->Ln(8);
+			for($i=0; $i<3; $i++) {
+				$pdf->SetFont('Times','B',10);
+				$pdf->Cell(0,10,'Reference '.$i,0,0);
+				$pdf->Ln(8);
+				$pdf->SetFont('Times','I',9);
+				$pdf->Cell(10,5,"Name:");
+				$pdf->SetFont('Times','',9);
+				$referencesNameSample = 'referencesName'.$i;
+				$pdf->Cell(70,5, $$referencesNameSample);
+				$pdf->SetFont('Times','I',9);
+				$pdf->Cell(12,5,'Phone:');
+				$pdf->SetFont('Times','',9);
+				$referencesPhoneSample = 'referencesPhone'.$i;
+				$pdf->Cell(15,5, $$referencesPhoneSample);
+				$pdf->Ln(5);
+				$pdf->SetFont('Times','I',9);
+				$pdf->Cell(13,5,"Address:");
+				$pdf->SetFont('Times','',9);
+				$referencesAddressSample = 'referencesAddress'.$i;
+				$pdf->Cell(83,5, $$referencesAddressSample);
+			}
 
 			$pdf->AddPage();
 			$pdf->SetFont('Times','B',9);
@@ -1666,326 +1244,37 @@ require('../../../fpdf/fpdf.php');
 
 			$pdf->Ln(1);
 
+			for($i=0; $i<10; $i++) {
+				$pdf->SetFont('Times','B',9);
+				$pdf->Cell(0,10,"Contact ".$i);
+				$pdf->Ln(6);
+				$pdf->SetFont('Times','I',9);
+				$pdf->Cell(17,5,"Company:");
+				$pdf->SetFont('Times','',9);
+				$pdf->Cell(70,5, $authCompany[$i]);
+				$pdf->SetFont('Times','I',9);
+				$pdf->Cell(22,5,'Contact Name:');
+				$pdf->SetFont('Times','',9);
+				$pdf->Cell(15,5, $authContact[$i]);
 
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(0,10,"Contact #1");
-			$pdf->Ln(6);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Company:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $authCompany[0]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,'Contact Name:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authContact[0]);
+				$pdf->Ln(5);
+				$pdf->SetFont('Times','I',9);
+				$pdf->Cell(22,5,"Phone Number:");
+				$pdf->SetFont('Times','',9);
+				$pdf->Cell(65,5, $authPhone[$i]);
+				$pdf->SetFont('Times','I',9);
+				$pdf->Cell(19,5,'Fax Number:');
+				$pdf->SetFont('Times','',9);
+				$pdf->Cell(15,5, $authFax[$i]);
 
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,"Phone Number:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(65,5, $authPhone[0]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(19,5,'Fax Number:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authFax[0]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(13,5,"Address:");
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(70,5, $authAddress[0]);
-			$pdf->Cell(13,5,"");
-			$pdf->Cell(70,5, ''.$authCity[0].' '.$authState[0].' '.$authZip[0].'');
-
-			$pdf->Ln(4);
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(0,10,"Contact #2");
-			$pdf->Ln(6);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Company:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $authCompany[1]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,'Contact Name:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authContact[1]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,"Phone Number:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(65,5, $authPhone[1]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(19,5,'Fax Number:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authFax[1]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(13,5,"Address:");
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(70,5, ' '.$authAddress[1].'');
-			$pdf->Cell(13,5,"");
-			$pdf->MultiCell(70,5, ' '.$authCity[1].' '.$authState[1].' '.$authZip[1].'' );
-
-
-			$pdf->Ln(4);
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(0,10,"Contact #3");
-			$pdf->Ln(6);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Company:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $authCompany[2]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,'Contact Name:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authContact[2]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,"Phone Number:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(65,5, $authPhone[2]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(19,5,'Fax Number:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authFax[2]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(13,5,"Address:");
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(70,5, ''.$authAddress[2].'');
-			$pdf->Cell(13,5,"");
-			$pdf->MultiCell(70,5, ' '.$authCity[2].' '.$authState[2].' '.$authZip[2].'' );
-
-
-			$pdf->Ln(4);
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(0,10,"Contact #4");
-			$pdf->Ln(6);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Company:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $authCompany[3]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,'Contact Name:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authContact[3]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,"Phone Number:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(65,5, $authPhone[3]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(19,5,'Fax Number:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authFax[3]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(13,5,"Address:");
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(70,5, ''.$authAddress[3].'');
-			$pdf->Cell(13,5,"");
-			$pdf->MultiCell(70,5, ' '.$authCity[3].' '.$authState[3].' '.$authZip[3].'' );
-
-
-			$pdf->Ln(4);
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(0,10,"Contact #5");
-			$pdf->Ln(6);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Company:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $authCompany[4]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,'Contact Name:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authContact[4]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,"Phone Number:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(65,5, $authPhone[4]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(19,5,'Fax Number:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authFax[4]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(13,5,"Address:");
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(70,5, ''.$authAddress[4].'');
-			$pdf->Cell(13,5,"");
-			$pdf->MultiCell(70,5, ' '.$authCity[4].' '.$authState[4].' '.$authZip[4].'' );
-
-
-			$pdf->Ln(4);
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(0,10,"Contact #6");
-			$pdf->Ln(6);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Company:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $authCompany[5]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,'Contact Name:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authContact[5]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,"Phone Number:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(65,5, $authPhone[5]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(19,5,'Fax Number:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authFax[5]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(13,5,"Address:");
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(70,5, ''.$authAddress[5].'');
-			$pdf->Cell(13,5,"");
-			$pdf->MultiCell(70,5, ' '.$authCity[5].' '.$authState[5].' '.$authZip[5].'' );
-
-
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(0,10,"Contact #7");
-			$pdf->Ln(6);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Company:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $authCompany[6]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,'Contact Name:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authContact[6]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,"Phone Number:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(65,5, $authPhone[6]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(19,5,'Fax Number:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authFax[6]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(13,5,"Address:");
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(70,5, ''.$authAddress[6].'');
-			$pdf->Cell(13,5,"");
-			$pdf->MultiCell(70,5, ' '.$authCity[6].' '.$authState[6].' '.$authZip[6].'' );
-
-
-			$pdf->AddPage();
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(0,10,"Contact #8");
-			$pdf->Ln(6);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Company:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $authCompany[7]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,'Contact Name:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authContact[7]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,"Phone Number:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(65,5, $authPhone[7]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(19,5,'Fax Number:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authFax[7]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(13,5,"Address:");
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(70,5, ''.$authAddress[7].'');
-			$pdf->Cell(13,5,"");
-			$pdf->MultiCell(70,5, ' '.$authCity[7].' '.$authState[7].' '.$authZip[7].'' );
-
-
-
-			$pdf->Ln(4);
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(0,10,"Contact #9");
-			$pdf->Ln(6);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Company:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $authCompany[8]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,'Contact Name:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authContact[8]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,"Phone Number:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(65,5, $authPhone[8]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(19,5,'Fax Number:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authFax[8]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(13,5,"Address:");
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(70,5, ''.$authAddress[8].'');
-			$pdf->Cell(13,5,"");
-			$pdf->MultiCell(70,5, ' '.$authCity[8].' '.$authState[8].' '.$authZip[8].'' );
-
-			$pdf->Ln(4);
-			$pdf->SetFont('Times','B',9);
-			$pdf->Cell(0,10,"Contact #10");
-			$pdf->Ln(6);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(17,5,"Company:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(70,5, $authCompany[9]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,'Contact Name:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authContact[9]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(22,5,"Phone Number:");
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(65,5, $authPhone[9]);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(19,5,'Fax Number:');
-			$pdf->SetFont('Times','',9);
-			$pdf->Cell(15,5, $authFax[9]);
-
-			$pdf->Ln(5);
-			$pdf->SetFont('Times','I',9);
-			$pdf->Cell(13,5,"Address:");
-			$pdf->SetFont('Times','',9);
-			$pdf->MultiCell(70,5, ''.$authAddress[9].'');
-			$pdf->Cell(13,5,"");
-			$pdf->MultiCell(70,5, ' '.$authCity[9].' '.$authState[9].' '.$authZip[9].'' );
-
-			
+				$pdf->Ln(5);
+				$pdf->SetFont('Times','I',9);
+				$pdf->Cell(13,5,"Address:");
+				$pdf->SetFont('Times','',9);
+				$pdf->MultiCell(70,5, $authAddress[$i]);
+				$pdf->Cell(13,5,"");
+				$pdf->Cell(70,5, ''.$authCity[$i].' '.$authState[$i].' '.$authZip[$i].'');
+			}		
 			
 
 			$pdf->Ln(15);

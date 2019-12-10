@@ -1540,16 +1540,44 @@
                                 <center><h3>Reference 1</h3></center>
                             </div>
                             <div class="section colm colm6" style="margin-bottom: 0px">
+                                <label for="referencesName0" class="field-label">Full Name</label>
+                                <label class="field prepend-icon">
+                                    <input type="text" name="referencesName0" id="referencesName0" class="gui-input" placeholder="Full Name" required>
+                                    <span class="field-icon"><i class="fa fa-user"></i></span>
+                                </label>
+                            </div><!-- end section -->
+                            <div class="section colm colm6">
+                                <label for="referencesPhone0" class="field-label">Phone Number</label>
+                                <label class="field prepend-icon">
+                                    <input type="tel" name="referencesPhone0" id="referencesPhone0" class="gui-input" placeholder="Phone Number" required>
+                                    <span class="field-icon"><i class="fa fa-phone-square"></i></span>
+                                </label>
+                            </div><!-- end section -->
+                        </div>
+                        <div class="frm-row">
+                            <div class="section colm colm12" style="margin-bottom: 0px">
+                                <label for="referencesAddress0" class="field-label">Full Address</label>
+                                <label class="field prepend-icon">
+                                    <input type="text" name="referencesAddress0" id="referencesAddress0" class="gui-input" placeholder=" Full Address ">
+                                    <span class="field-icon"><i class="fas fa-map-marker-alt"></i></span>
+                                </label>
+                            </div><!-- end section -->
+                        </div>
+                        <div class="section colm colm12">
+                            <center><h3>Reference 2</h3></center>
+                        </div>
+                        <div class="frm-row">
+                            <div class="section colm colm6">
                                 <label for="referencesName1" class="field-label">Full Name</label>
                                 <label class="field prepend-icon">
-                                    <input type="text" name="referencesName1" id="referencesName1" class="gui-input" placeholder="Full Name" required>
+                                    <input type="text" name="referencesName1" id="referencesName1" class="gui-input" placeholder="Full Name">
                                     <span class="field-icon"><i class="fa fa-user"></i></span>
                                 </label>
                             </div><!-- end section -->
                             <div class="section colm colm6">
                                 <label for="referencesPhone1" class="field-label">Phone Number</label>
                                 <label class="field prepend-icon">
-                                    <input type="tel" name="referencesPhone1" id="referencesPhone1" class="gui-input" placeholder="Phone Number" required>
+                                    <input type="tel" name="referencesPhone1" id="referencesPhone1" class="gui-input" placeholder="Phone Number">
                                     <span class="field-icon"><i class="fa fa-phone-square"></i></span>
                                 </label>
                             </div><!-- end section -->
@@ -1564,7 +1592,7 @@
                             </div><!-- end section -->
                         </div>
                         <div class="section colm colm12">
-                            <center><h3>Reference 2</h3></center>
+                            <center><h3>Reference 3</h3></center>
                         </div>
                         <div class="frm-row">
                             <div class="section colm colm6">
@@ -1583,38 +1611,10 @@
                             </div><!-- end section -->
                         </div>
                         <div class="frm-row">
-                            <div class="section colm colm12" style="margin-bottom: 0px">
-                                <label for="referencesAddress2" class="field-label">Full Address</label>
-                                <label class="field prepend-icon">
-                                    <input type="text" name="referencesAddress2" id="referencesAddress2" class="gui-input" placeholder=" Full Address ">
-                                    <span class="field-icon"><i class="fas fa-map-marker-alt"></i></span>
-                                </label>
-                            </div><!-- end section -->
-                        </div>
-                        <div class="section colm colm12">
-                            <center><h3>Reference 3</h3></center>
-                        </div>
-                        <div class="frm-row">
-                            <div class="section colm colm6">
-                                <label for="referencesName3" class="field-label">Full Name</label>
-                                <label class="field prepend-icon">
-                                    <input type="text" name="referencesName3" id="referencesName3" class="gui-input" placeholder="Full Name">
-                                    <span class="field-icon"><i class="fa fa-user"></i></span>
-                                </label>
-                            </div><!-- end section -->
-                            <div class="section colm colm6">
-                                <label for="referencesPhone3" class="field-label">Phone Number</label>
-                                <label class="field prepend-icon">
-                                    <input type="tel" name="referencesPhone3" id="referencesPhone3" class="gui-input" placeholder="Phone Number">
-                                    <span class="field-icon"><i class="fa fa-phone-square"></i></span>
-                                </label>
-                            </div><!-- end section -->
-                        </div>
-                        <div class="frm-row">
                             <div class="section colm colm12">
                                 <label for="referencesAddress2" class="field-label">Full Address</label>
                                 <label class="field prepend-icon">
-                                    <input type="text" name="referencesAddress3" id="referencesAddress3" class="gui-input" placeholder=" Full Address ">
+                                    <input type="text" name="referencesAddress2" id="referencesAddress2" class="gui-input" placeholder=" Full Address ">
                                     <span class="field-icon"><i class="fas fa-map-marker-alt"></i></span>
                                 </label>
                             </div><!-- end section -->
@@ -2040,7 +2040,7 @@
                                 <div class="section colm colm6">
                                     <label for="carrierPhone" class="field-label">Phone Number</label>
                                     <label class="field prepend-icon">
-                                        <input type="tel" name="carrierPhone[]" id="carrierPhone" class="gui-input" placeholder="Phone Number">
+                                        <input type="tel" name="carrierPhone" id="carrierPhone" class="gui-input" placeholder="Phone Number">
                                         <span class="field-icon"><i class="fa fa-phone-square"></i></span>
                                     </label>
                                 </div><!-- end section -->

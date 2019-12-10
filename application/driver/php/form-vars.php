@@ -1,4 +1,5 @@
 <?php
+
 $idName = strip_tags(trim($_POST['idName']));
 $idDob = strip_tags(trim($_POST['idDob']));
 $idSs = strip_tags(trim($_POST['idSs']));
